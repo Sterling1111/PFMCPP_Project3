@@ -196,53 +196,53 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with
         'int float double bool char std::string'.
 
-Thing 1)
+Thing 1) Computer
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) the frequency of processor
+    2) the amount of ram
+    3) the amount of storage
+    4) the number of cores in cpu
+    5) power supply wattage
 3 things it can do:
-    1)
-    2)
-    3)
+    1) run web browser
+    2) run adobe photoshop
+    3) consume electricity
 
-Thing 2)
+Thing 2) Car
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) the color of the car
+    2) the horsepower
+    3) the cost
+    4) the brand
+    5) the year
 3 things it can do:
-    1)
-    2)
-    3)
+    1) play music
+    2) drive
+    3) consume fuel
 
-Thing 3)
+Thing 3) Cell Phone
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) the color of the Phone
+    2) the data provider for the phone
+    3) the brand of the phone
+    4) the processor of the phone
+    5) the amount of ram of phone
 3 things it can do:
-    1)
-    2)
-    3)
+    1) make calls
+    2) browse web
+    3) play music
 
-Thing 4)
+Thing 4) Scree
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) brand
+    2) refresh rate
+    3) pixels x
+    4) pixels y
+    5) connectors
 3 things it can do:
-    1)
-    2)
-    3)
+    1) display images
+    2) adjust color settings
+    3) adjust refresh rate
 */
 
 /*
