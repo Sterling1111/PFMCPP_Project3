@@ -434,65 +434,65 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5)
+Thing 5) CPU
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) frequency in GHz (float)
+    2) cache in Mb (int)
+    3) number of cores (int)
+    4) architecture (string)
+    5) size of process in nm (int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) add numbers
+    2) jump
+    3) load data
 
-Thing 6)
+Thing 6) Graphics Card
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Cuda cores (int)
+    2) RT cores (int)
+    3) VRAM (int)
+    4) brand (string)
+    5) frequency in Ghz (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) vector operations
+    2) matrix operations
+    3) texture operations
 
-Thing 7)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+Thing 7) RAM
+5 properti:
+    1) quantity in GBs (int)
+    2) transfer rate (int)
+    3) generation (string)
+    4) brand (string)
+    5) cost (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) write values
+    2) read values
+    3) display rgb lights
 
-Thing 8)
+Thing 8) Motherboard
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Form factor (string)
+    2) socket type (string)
+    3) expandison slots (string)
+    4) ram slots (string)
+    5) i/o ports (string)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) transfer data from cpu to ram
+    2) transfer data from gpu to cpu
+    3) transfer data from io ports to cpu
 
-Thing 9)
+Thing 9) Power Supply
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) wattage (int)
+    2) efficiency rating (string)
+    3) form factor (string)
+    4) modularity (string)
+    5) connectors (string)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) turn ac into dc
+    2) provide electricity to components
+    3) regulate voltage
  */
 
 /*
