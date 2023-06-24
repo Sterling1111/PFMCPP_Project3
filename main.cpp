@@ -198,11 +198,11 @@ Part 1b - Step 2: Assignment
 
 Thing 1) Computer
 5 properties:
-    1) the frequency of processor
-    2) the amount of ram
-    3) the amount of storage
-    4) the number of cores in cpu
-    5) power supply wattage
+    1) the frequency of processor (float)
+    2) the amount of ram (int)
+    3) the amount of storage (int)
+    4) the number of cores in cpu (int)
+    5) power supply wattage (int)
 3 things it can do:
     1) run web browser
     2) run adobe photoshop
@@ -210,11 +210,11 @@ Thing 1) Computer
 
 Thing 2) Car
 5 properties:
-    1) the color of the car
-    2) the horsepower
-    3) the cost
-    4) the brand
-    5) the year
+    1) the color of the car (string)
+    2) the horsepower (int)
+    3) the cost (float)
+    4) the brand (string)
+    5) the year (int)
 3 things it can do:
     1) play music
     2) drive
@@ -222,11 +222,11 @@ Thing 2) Car
 
 Thing 3) Cell Phone
 5 properties:
-    1) the color of the Phone
-    2) the data provider for the phone
-    3) the brand of the phone
-    4) the processor of the phone
-    5) the amount of ram of phone
+    1) the color of the Phone (string)
+    2) the data provider for the phone (string)
+    3) the brand of the phone (string)
+    4) the processor of the phone (string)
+    5) the amount of ram of phone (int)
 3 things it can do:
     1) make calls
     2) browse web
@@ -234,11 +234,11 @@ Thing 3) Cell Phone
 
 Thing 4) Scree
 5 properties:
-    1) brand
-    2) refresh rate
-    3) pixels x
-    4) pixels y
-    5) connectors
+    1) brand (string)
+    2) refresh rate (int)
+    3) pixels x (int)
+    4) pixels y (int)
+    5) connectors (string)
 3 things it can do:
     1) display images
     2) adjust color settings
