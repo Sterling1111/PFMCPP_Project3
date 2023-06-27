@@ -948,6 +948,10 @@ struct Computer
     int storageAmount{512};
     int numCores{};
     int powerSupplyWattage{550};
+
+    void launchWebBrowser();
+    void launchAdobePhotoshop();
+    void consumeElectricity();
 };
 
 struct Car
@@ -1109,9 +1113,9 @@ struct GraphicsCard
     std::string brand{"NVIDIA"};
     float frequency{2.1f};
 
-    void vectorOperations();
-    void matrixOperations();
-    void textureOperations();
+    void rotateMatrix();    //should take a matrix but not primitive
+    void multipleMatrixByScalar(double scalar);
+    void multiplyTwoMatrices(); //should take 2 matrices
 };
 
 struct RAM
@@ -1187,7 +1191,7 @@ struct PowerSupply
     std::string modularity{"modular"};
     std::string connectors{"connectors"};
 
-    void TurnACToDC();
+    void turnACToDC();
     void provideElectricity();
     void regulateVoltage();
 };
@@ -1213,7 +1217,7 @@ struct Desktop
     MotherBoard motherBoard{};
     PowerSupply powerSupply{};
 
-    void game();
+    void runGame(std::string nameOfGameToLaunch);
     void browseWeb();
     void compileCode();
 };
