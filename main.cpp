@@ -475,8 +475,8 @@ Thing 4) Scree
     1) display images
     2) adjust color settings
     3) adjust refresh rate
-    
-    
+
+
 Thing 5) CPU
 5 properties:
     1) frequency in GHz (float)
@@ -535,7 +535,7 @@ Thing 9) Power Supply
 3 things it can do:
     1) turn ac into dc
     2) provide electricity to components
-    3) regulate voltage 
+    3) regulate voltage
 
  Thing 10) Desktop PC
 5 properties:
@@ -612,6 +612,57 @@ Thing 1): Car Wash
         {
             //notice that no code is written inside the curly braces.
         };
+
+        struct Computer
+        {
+
+        };
+
+        struct Car
+        {
+
+        };
+
+        struct CellPhone
+        {
+
+        };
+
+        struct Screen
+        {
+
+        };
+
+        struct CPU
+        {
+
+        };
+
+        struct GraphicsCard
+        {
+
+        };
+
+        struct RAM
+        {
+
+        };
+
+        struct MotherBoard
+        {
+
+        };
+
+        struct PowerSupply
+        {
+
+        };
+
+        struct Desktop
+        {
+
+        };
+
 /*
 Notice that the struct name 'CarWash' conforms with the Course Coding Standard, described in the Readme.MD
 */
