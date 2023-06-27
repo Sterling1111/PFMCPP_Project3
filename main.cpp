@@ -613,56 +613,6 @@ Thing 1): Car Wash
             //notice that no code is written inside the curly braces.
         };
 
-        struct Computer
-        {
-
-        };
-
-        struct Car
-        {
-
-        };
-
-        struct CellPhone
-        {
-
-        };
-
-        struct Screen
-        {
-
-        };
-
-        struct CPU
-        {
-
-        };
-
-        struct GraphicsCard
-        {
-
-        };
-
-        struct RAM
-        {
-
-        };
-
-        struct MotherBoard
-        {
-
-        };
-
-        struct PowerSupply
-        {
-
-        };
-
-        struct Desktop
-        {
-
-        };
-
 /*
 Notice that the struct name 'CarWash' conforms with the Course Coding Standard, described in the Readme.MD
 */
@@ -702,166 +652,6 @@ Part 1e - Step 3: Assignment
             //    - detail the car interior
         };
 
-        struct Computer
-        {
-            /*
-             5 properties:
-                1) the frequency of processor (float)
-                2) the amount of ram (int)
-                3) the amount of storage (int)
-                4) the number of cores in cpu (int)
-                5) power supply wattage (int)
-            3 things it can do:
-                1) run web browser
-                2) run adobe photoshop
-                3) consume electricity
-            */
-        };
-
-        struct Car
-        {
-            /*
-             5 properties:
-                1) the color of the car (string)
-                2) the horsepower (int)
-                3) the cost (float)
-                4) the brand (string)
-                5) the year (int)
-            3 things it can do:
-                1) play music
-                2) drive
-                3) consume fuel
-             */
-        };
-
-        struct CellPhone
-        {
-            /*
-             5 properties:
-                1) the color of the Phone (string)
-                2) the data provider for the phone (string)
-                3) the brand of the phone (string)
-                4) the processor of the phone (string)
-                5) the amount of ram of phone (int)
-            3 things it can do:
-                1) make calls
-                2) browse web
-                3) play music
-             */
-        };
-
-        struct Screen
-        {
-            /*
-             5 properties:
-                1) brand (string)
-                2) refresh rate (int)
-                3) pixels x (int)
-                4) pixels y (int)
-                5) connectors (string)
-            3 things it can do:
-                1) display images
-                2) adjust color settings
-                3) adjust refresh rate
-             */
-        };
-
-        struct CPU
-        {
-            /*
-             5 properties:
-                1) frequency in GHz (float)
-                2) cache in Mb (int)
-                3) number of cores (int)
-                4) architecture (string)
-                5) size of process in nm (int)
-            3 things it can do:
-                1) add numbers
-                2) jump
-                3) load data
-             */
-        };
-
-        struct GraphicsCard
-        {
-            /*
-             5 properties:
-                1) Cuda cores (int)
-                2) RT cores (int)
-                3) VRAM (int)
-                4) brand (string)
-                5) frequency in Ghz (float)
-            3 things it can do:
-                1) vector operations
-                2) matrix operations
-                3) texture operations
-             */
-        };
-
-        struct RAM
-        {
-            /*
-             5 properties:
-                1) quantity in GBs (int)
-                2) transfer rate (int)
-                3) generation (string)
-                4) brand (string)
-                5) cost (float)
-            3 things it can do:
-                1) write values
-                2) read values
-                3) display rgb lights
-             */
-        };
-
-        struct MotherBoard
-        {
-            /*
-             5 properties:
-                1) Form factor (string)
-                2) socket type (string)
-                3) expandison slots (string)
-                4) ram slots (string)
-                5) i/o ports (string)
-            3 things it can do:
-                1) transfer data from cpu to ram
-                2) transfer data from gpu to cpu
-                3) transfer data from io ports to cpu
-             */
-        };
-
-        struct PowerSupply
-        {
-            /*
-             5 properties:
-                1) wattage (int)
-                2) efficiency rating (string)
-                3) form factor (string)
-                4) modularity (string)
-                5) connectors (string)
-            3 things it can do:
-                1) turn ac into dc
-                2) provide electricity to components
-                3) regulate voltage
-             */
-        };
-
-        struct Desktop
-        {
-            /*
-             5 properties:
-                1) CPU
-                2) Graphics Card
-                3) RAM
-                4) Motherboard
-                5) Power Supply
-            3 things it can do:
-                1) gaming
-                2) web browsing
-                3) code compile
-             */
-        };
-
 /*
 =================
 Part 1e - Step 4: Commit
@@ -897,225 +687,6 @@ Part 1e - Step 5: Assignment
             //    - wash and wax car
             //    - charge customer
             //    - detail the car interior
-        };
-
-        struct Computer
-        {
-            /*
-             5 properties:
-                1) the frequency of processor (float)
-                2) the amount of ram (int)
-                3) the amount of storage (int)
-                4) the number of cores in cpu (int)
-                5) power supply wattage (int)
-            3 things it can do:
-                1) run web browser
-                2) run adobe photoshop
-                3) consume electricity
-            */
-            float clockFrequency{4.0f};
-            int ramAmount{32};
-            int storageAmount{512};
-            int numCores{};
-            int powerSupplyWattage{550};
-        };
-
-        struct Car
-        {
-            /*
-             5 properties:
-                1) the color of the car (string)
-                2) the horsepower (int)
-                3) the cost (float)
-                4) the brand (string)
-                5) the year (int)
-            3 things it can do:
-                1) play music
-                2) drive
-                3) consume fuel
-             */
-
-            std::string carColor{"white"};
-            int horsePower{200};
-            float cost{32'000.f};
-            std::string brand{"Honda"};
-            int year{1997};
-        };
-
-        struct CellPhone
-        {
-            /*
-             5 properties:
-                1) the color of the Phone (string)
-                2) the data provider for the phone (string)
-                3) the brand of the phone (string)
-                4) the processor of the phone (string)
-                5) the amount of ram of phone (int)
-            3 things it can do:
-                1) make calls
-                2) browse web
-                3) play music
-             */
-
-            std::string color{"blue"};
-            std::string dataProvider{"AT&T"};
-            std::string brand{"Samsung"};
-            std::string processor{"Qualcomm 865"};
-            int ramAmount{12};
-        };
-
-        struct Screen
-        {
-            /*
-             5 properties:
-                1) brand (string)
-                2) refresh rate (int)
-                3) pixels x (int)
-                4) pixels y (int)
-                5) connectors (string)
-            3 things it can do:
-                1) display images
-                2) adjust color settings
-                3) adjust refresh rate
-             */
-
-            std::string brand{"Dell"};
-            int refreshRate{75};
-            int pixelsX{920};
-            int pixelsY{560};
-            std::string connectors{"HDMI"};
-        };
-
-        struct CPU
-        {
-            /*
-             5 properties:
-                1) frequency in GHz (float)
-                2) cache in Mb (int)
-                3) number of cores (int)
-                4) architecture (string)
-                5) size of process in nm (int)
-            3 things it can do:
-                1) add numbers
-                2) jump
-                3) load data
-             */
-
-            float frequency{4.0f};
-            int amountCache{20};
-            int numCores{10};
-            std::string architecture{"x86"};
-            int nodeProcessSize{14};
-        };
-
-        struct GraphicsCard
-        {
-            /*
-             5 properties:
-                1) Cuda cores (int)
-                2) RT cores (int)
-                3) VRAM (int)
-                4) brand (string)
-                5) frequency in Ghz (float)
-            3 things it can do:
-                1) vector operations
-                2) matrix operations
-                3) texture operations
-             */
-
-            int numCudaCores{4000};
-            int numRTCores{72};
-            int amountVRAM{8};
-            std::string brand{"NVIDIA"};
-            float frequency{2.1};
-        };
-
-        struct RAM
-        {
-            /*
-             5 properties:
-                1) quantity in GBs (int)
-                2) transfer rate (int)
-                3) generation (string)
-                4) brand (string)
-                5) cost (float)
-            3 things it can do:
-                1) write values
-                2) read values
-                3) display rgb lights
-             */
-
-            int numGBs{32};
-            int transferRate{3700};
-            std::string generation{"DDR4"};
-            std::string brand{"Corsair"};
-            float cost{124.99f};
-        };
-
-        struct MotherBoard
-        {
-            /*
-             5 properties:
-                1) Form factor (string)
-                2) socket type (string)
-                3) expandison slots (string)
-                4) ram slots (string)
-                5) i/o ports (string)
-            3 things it can do:
-                1) transfer data from cpu to ram
-                2) transfer data from gpu to cpu
-                3) transfer data from io ports to cpu
-             */
-
-            std::string formFactor{"form factor"};
-            std::string socketType{"LGA"};
-            std::string expansionSlots{"expansion slots"};
-            std::string ramSlots{"ram slots"};
-            std::string IOPorts{"io ports"};
-        };
-
-        struct PowerSupply
-        {
-            /*
-             5 properties:
-                1) wattage (int)
-                2) efficiency rating (string)
-                3) form factor (string)
-                4) modularity (string)
-                5) connectors (string)
-            3 things it can do:
-                1) turn ac into dc
-                2) provide electricity to components
-                3) regulate voltage
-             */
-
-            int wattage{550};
-            std::string efficientRating{"efficient rating"};
-            std::string formFactor{"80+ gold"};
-            std::string modularity{"modular"};
-            std::string connectors{"connectors"};
-        };
-
-        struct Desktop
-        {
-            /*
-             5 properties:
-                1) CPU
-                2) Graphics Card
-                3) RAM
-                4) Motherboard
-                5) Power Supply
-            3 things it can do:
-                1) gaming
-                2) web browsing
-                3) code compile
-             */
-
-            CPU cpu{};
-            GraphicsCard graphicsCard{};
-            RAM ram{};
-            MotherBoard motherBoard{};
-            PowerSupply powerSupply{};
         };
 /*
 
@@ -1159,615 +730,6 @@ Part 1e - Step 7: Assignment
 
             //detail the car interior
             void detailInterior();
-        };
-
-        struct Computer
-        {
-            /*
-             5 properties:
-                1) the frequency of processor (float)
-                2) the amount of ram (int)
-                3) the amount of storage (int)
-                4) the number of cores in cpu (int)
-                5) power supply wattage (int)
-            3 things it can do:
-                1) run web browser
-                2) run adobe photoshop
-                3) consume electricity
-            */
-            float clockFrequency{4.0f};
-            int ramAmount{32};
-            int storageAmount{512};
-            int numCores{};
-            int powerSupplyWattage{550};
-
-            int runWebBrowser(); //returns exit code of application
-            int runAdobePhotoshop(); //returns exit code of application
-            int consumeElectricity(); //returns amount of energy consumed in watt hours
-        };
-
-        struct Car
-        {
-            /*
-             5 properties:
-                1) the color of the car (string)
-                2) the horsepower (int)
-                3) the cost (float)
-                4) the brand (string)
-                5) the year (int)
-            3 things it can do:
-                1) play music
-                2) drive
-                3) consume fuel
-             */
-
-            std::string carColor{"white"};
-            int horsePower{200};
-            float cost{32'000.f};
-            std::string brand{"Honda"};
-            int year{1997};
-
-            void playMusic();
-            void drive();
-            float consumeFuel(); // return the fuel consumed in gallon
-
-        };
-
-        struct CellPhone
-        {
-            /*
-             5 properties:
-                1) the color of the Phone (string)
-                2) the data provider for the phone (string)
-                3) the brand of the phone (string)
-                4) the processor of the phone (string)
-                5) the amount of ram of phone (int)
-            3 things it can do:
-                1) make calls
-                2) browse web
-                3) play music
-             */
-
-            std::string color{"blue"};
-            std::string dataProvider{"AT&T"};
-            std::string brand{"Samsung"};
-            std::string processor{"Qualcomm 865"};
-            int ramAmount{12};
-
-            void makeCall();
-            void browseWeb();
-            void playMusic();
-        };
-
-        struct Screen
-        {
-            /*
-             5 properties:
-                1) brand (string)
-                2) refresh rate (int)
-                3) pixels x (int)
-                4) pixels y (int)
-                5) connectors (string)
-            3 things it can do:
-                1) display images
-                2) adjust color settings
-                3) adjust refresh rate
-             */
-
-            std::string brand{"Dell"};
-            int refreshRate{75};
-            int pixelsX{920};
-            int pixelsY{560};
-            std::string connectors{"HDMI"};
-
-            void displayImages();
-            void adjustColorSettings();
-            void adjustRefreshRate();
-        };
-
-        struct CPU
-        {
-            /*
-             5 properties:
-                1) frequency in GHz (float)
-                2) cache in Mb (int)
-                3) number of cores (int)
-                4) architecture (string)
-                5) size of process in nm (int)
-            3 things it can do:
-                1) add numbers
-                2) jump
-                3) load data
-             */
-
-            float frequency{4.0f};
-            int amountCache{20};
-            int numCores{10};
-            std::string architecture{"x86"};
-            int nodeProcessSize{14};
-
-            int addNumbers(int num1, int num2); //returns the result of addition.
-            int jump(int offset); //returns the new address after the offset is added to curr address.
-            int loadDate(int address); //returns the loaded data after gets from memory.
-        };
-
-        struct GraphicsCard
-        {
-            /*
-             5 properties:
-                1) Cuda cores (int)
-                2) RT cores (int)
-                3) VRAM (int)
-                4) brand (string)
-                5) frequency in Ghz (float)
-            3 things it can do:
-                1) vector operations
-                2) matrix operations
-                3) texture operations
-             */
-
-            int numCudaCores{4000};
-            int numRTCores{72};
-            int amountVRAM{8};
-            std::string brand{"NVIDIA"};
-            float frequency{2.1};
-
-            void vectorOperations();
-            void matrixOperations();
-            void textureOperations();
-        };
-
-        struct RAM
-        {
-            /*
-             5 properties:
-                1) quantity in GBs (int)
-                2) transfer rate (int)
-                3) generation (string)
-                4) brand (string)
-                5) cost (float)
-            3 things it can do:
-                1) write values
-                2) read values
-                3) display rgb lights
-             */
-
-            int numGBs{32};
-            int transferRate{3700};
-            std::string generation{"DDR4"};
-            std::string brand{"Corsair"};
-            float cost{124.99f};
-
-            void writeData(int data);
-            int readData(int address);  //reads data at given address
-            void displayLights();
-        };
-
-        struct MotherBoard
-        {
-            /*
-             5 properties:
-                1) Form factor (string)
-                2) socket type (string)
-                3) expandison slots (string)
-                4) ram slots (string)
-                5) i/o ports (string)
-            3 things it can do:
-                1) transfer data from cpu to ram
-                2) transfer data from gpu to cpu
-                3) transfer data from io ports to cpu
-             */
-
-            std::string formFactor{"form factor"};
-            std::string socketType{"LGA"};
-            std::string expansionSlots{"expansion slots"};
-            std::string ramSlots{"ram slots"};
-            std::string IOPorts{"io ports"};
-
-            void transferDataFromCPUToRAM();
-            void transferDataFromGPUToCPU();
-            void transferDataFromIOToCPU();
-        };
-
-        struct PowerSupply
-        {
-            /*
-             5 properties:
-                1) wattage (int)
-                2) efficiency rating (string)
-                3) form factor (string)
-                4) modularity (string)
-                5) connectors (string)
-            3 things it can do:
-                1) turn ac into dc
-                2) provide electricity to components
-                3) regulate voltage
-             */
-
-            int wattage{550};
-            std::string efficientRating{"efficient rating"};
-            std::string formFactor{"80+ gold"};
-            std::string modularity{"modular"};
-            std::string connectors{"connectors"};
-
-            void TurnACToDC();
-            void provideElectricity();
-            void regulateVoltage();
-        };
-
-        struct Desktop
-        {
-            /*
-             5 properties:
-                1) CPU
-                2) Graphics Card
-                3) RAM
-                4) Motherboard
-                5) Power Supply
-            3 things it can do:
-                1) gaming
-                2) web browsing
-                3) code compile
-             */
-
-            CPU cpu{};
-            GraphicsCard graphicsCard{};
-            RAM ram{};
-            MotherBoard motherBoard{};
-            PowerSupply powerSupply{};
-
-            void game();
-            void browseWeb();
-            void compileCode();
-        };
-/*
-=================
-Part 1e - Step 8: Commit
-=================
-Now that you've made changes, make a commit!
-Be sure to make the commit message meaningful.
-*/
-    } //end namespace Part1E_Step7
-
-    namespace Part1E_Step19
-    {
-/*
-=================
-Part 1e - Step 9: Assignment
-=================
-5) Declare/define a nested class inside 2 of the 9 user-defined types.
-    - Do not declare/define a nested class in UDT #10
-    - this nested class also needs 5 properties and 3 actions.
-    - these nested classes are in addition to the 10 UDTs you are defining in this project.
-    - this nested class MUST be related to the class it is nested inside
-*/
-        struct CarWash
-        {
-            //number of vacuum cleaners
-            int numVacuumCleaners = 3;
-            //number of eco-friendly cleaning supplies
-            int numEcoFriendlyCleaningSupplies = 20;
-            //stores the amount of water used per week.
-            float waterUsedPerWeek = 200.f;
-            //stores amount of profit made per week
-            float profitPerWeek = 495.95f;
-            //number of cars serviced per day
-            int numberOfCarsServiced = 10;
-
-            //this is the nested UDT:
-            struct Car                  //Note that the nested type 'Car' is related to the 'CarWash'
-            {
-                //5 member variables with relevant data types.  the names are relevant to the UDT's purpose.
-                bool isAPickupTruck = false;
-                float gasMileage = 26.2f;
-                int year = 1985;
-                std::string manufacturer = "Toyota";
-                std::string model = "Corolla";
-
-                // 3 member functions.
-                // they take multiple parameters. some parameters have default values.
-                // the parameter names are related to the work the function will perform.
-                // all function and variable names conform to the course coding standard, described in the Readme.MD file
-                void fillTank(float costPerGallon, double fuelAmountInGallons = 2.0, bool requiresDiesel = false);
-                void breakDown(std::string failureType, bool requiresTow = false);
-                int getMilesTraveledAnnually(bool includeUberLyftTrips); //3) returns the number of miles traveled
-            }; //this is the end of the nested class
-
-            //3 things it can do:
-            //wash and wax car
-            void washAndWaxCar();
-
-            //charge customer       //NOTE: function parameter is relevant to the work that the function performs
-            float chargeCustomer(float discountPercentage); //returns the total amount charged.
-
-            //detail the car interior
-            void detailInterior();
-        };
-
-        struct Computer
-        {
-            /*
-             5 properties:
-                1) the frequency of processor (float)
-                2) the amount of ram (int)
-                3) the amount of storage (int)
-                4) the number of cores in cpu (int)
-                5) power supply wattage (int)
-            3 things it can do:
-                1) run web browser
-                2) run adobe photoshop
-                3) consume electricity
-            */
-            float clockFrequency{4.0f};
-            int ramAmount{32};
-            int storageAmount{512};
-            int numCores{};
-            int powerSupplyWattage{550};
-
-            int runWebBrowser(); //returns exit code of application
-            int runAdobePhotoshop(); //returns exit code of application
-            int consumeElectricity(); //returns amount of energy consumed in watt hours
-        };
-
-        struct Car
-        {
-            /*
-             5 properties:
-                1) the color of the car (string)
-                2) the horsepower (int)
-                3) the cost (float)
-                4) the brand (string)
-                5) the year (int)
-            3 things it can do:
-                1) play music
-                2) drive
-                3) consume fuel
-             */
-
-            struct Fuel
-            {
-                int octaneRating{91};
-                float costPerGallon{4.55};
-                std::string CountryOfOrigin{"Saudi Arabia"};
-                std::string distributer{"Shell"};
-                std::string color{"clear"};
-
-                void burn();
-                void smell();
-                void flow();
-            };
-
-            std::string carColor{"white"};
-            int horsePower{200};
-            float cost{32'000.f};
-            std::string brand{"Honda"};
-            int year{1997};
-
-            void playMusic();
-            void drive();
-            float consumeFuel(); // return the fuel consumed in gallon
-
-        };
-
-        struct CellPhone
-        {
-            /*
-             5 properties:
-                1) the color of the Phone (string)
-                2) the data provider for the phone (string)
-                3) the brand of the phone (string)
-                4) the processor of the phone (string)
-                5) the amount of ram of phone (int)
-            3 things it can do:
-                1) make calls
-                2) browse web
-                3) play music
-             */
-
-            struct Case
-            {
-                std::string color{"black"};
-                std::string brand{"Spigen"};
-                float cost{12.99f};
-                std::string features{"kickstand"};
-                bool isPadded{true};
-
-                void wrapPhone();
-                void providePadding();
-                void preventScratches();
-            };
-
-            std::string color{"blue"};
-            std::string dataProvider{"AT&T"};
-            std::string brand{"Samsung"};
-            std::string processor{"Qualcomm 865"};
-            int ramAmount{12};
-
-            void makeCall();
-            void browseWeb();
-            void playMusic();
-        };
-
-        struct Screen
-        {
-            /*
-             5 properties:
-                1) brand (string)
-                2) refresh rate (int)
-                3) pixels x (int)
-                4) pixels y (int)
-                5) connectors (string)
-            3 things it can do:
-                1) display images
-                2) adjust color settings
-                3) adjust refresh rate
-             */
-
-            std::string brand{"Dell"};
-            int refreshRate{75};
-            int pixelsX{920};
-            int pixelsY{560};
-            std::string connectors{"HDMI"};
-
-            void displayImages();
-            void adjustColorSettings();
-            void adjustRefreshRate();
-        };
-
-        struct CPU
-        {
-            /*
-             5 properties:
-                1) frequency in GHz (float)
-                2) cache in Mb (int)
-                3) number of cores (int)
-                4) architecture (string)
-                5) size of process in nm (int)
-            3 things it can do:
-                1) add numbers
-                2) jump
-                3) load data
-             */
-
-            float frequency{4.0f};
-            int amountCache{20};
-            int numCores{10};
-            std::string architecture{"x86"};
-            int nodeProcessSize{14};
-
-            int addNumbers(int num1, int num2); //returns the result of addition.
-            int jump(int offset); //returns the new address after the offset is added to curr address.
-            int loadDate(int address); //returns the loaded data after gets from memory.
-        };
-
-        struct GraphicsCard
-        {
-            /*
-             5 properties:
-                1) Cuda cores (int)
-                2) RT cores (int)
-                3) VRAM (int)
-                4) brand (string)
-                5) frequency in Ghz (float)
-            3 things it can do:
-                1) vector operations
-                2) matrix operations
-                3) texture operations
-             */
-
-            int numCudaCores{4000};
-            int numRTCores{72};
-            int amountVRAM{8};
-            std::string brand{"NVIDIA"};
-            float frequency{2.1};
-
-            void vectorOperations();
-            void matrixOperations();
-            void textureOperations();
-        };
-
-        struct RAM
-        {
-            /*
-             5 properties:
-                1) quantity in GBs (int)
-                2) transfer rate (int)
-                3) generation (string)
-                4) brand (string)
-                5) cost (float)
-            3 things it can do:
-                1) write values
-                2) read values
-                3) display rgb lights
-             */
-
-            int numGBs{32};
-            int transferRate{3700};
-            std::string generation{"DDR4"};
-            std::string brand{"Corsair"};
-            float cost{124.99f};
-
-            void writeData(int data);
-            int readData(int address);  //reads data at given address
-            void displayLights();
-        };
-
-        struct MotherBoard
-        {
-            /*
-             5 properties:
-                1) Form factor (string)
-                2) socket type (string)
-                3) expandison slots (string)
-                4) ram slots (string)
-                5) i/o ports (string)
-            3 things it can do:
-                1) transfer data from cpu to ram
-                2) transfer data from gpu to cpu
-                3) transfer data from io ports to cpu
-             */
-
-            std::string formFactor{"form factor"};
-            std::string socketType{"LGA"};
-            std::string expansionSlots{"expansion slots"};
-            std::string ramSlots{"ram slots"};
-            std::string IOPorts{"io ports"};
-
-            void transferDataFromCPUToRAM();
-            void transferDataFromGPUToCPU();
-            void transferDataFromIOToCPU();
-        };
-
-        struct PowerSupply
-        {
-            /*
-             5 properties:
-                1) wattage (int)
-                2) efficiency rating (string)
-                3) form factor (string)
-                4) modularity (string)
-                5) connectors (string)
-            3 things it can do:
-                1) turn ac into dc
-                2) provide electricity to components
-                3) regulate voltage
-             */
-
-            int wattage{550};
-            std::string efficientRating{"efficient rating"};
-            std::string formFactor{"80+ gold"};
-            std::string modularity{"modular"};
-            std::string connectors{"connectors"};
-
-            void TurnACToDC();
-            void provideElectricity();
-            void regulateVoltage();
-        };
-
-        struct Desktop
-        {
-            /*
-             5 properties:
-                1) CPU
-                2) Graphics Card
-                3) RAM
-                4) Motherboard
-                5) Power Supply
-            3 things it can do:
-                1) gaming
-                2) web browsing
-                3) code compile
-             */
-
-            CPU cpu{};
-            GraphicsCard graphicsCard{};
-            RAM ram{};
-            MotherBoard motherBoard{};
-            PowerSupply powerSupply{};
-
-            void game();
-            void browseWeb();
-            void compileCode();
         };
 /*
 =================
@@ -1886,294 +848,6 @@ Keep this in mind when you define the function parameter lists to use some of yo
             */
         };
 
-        struct Computer
-        {
-            /*
-             5 properties:
-                1) the frequency of processor (float)
-                2) the amount of ram (int)
-                3) the amount of storage (int)
-                4) the number of cores in cpu (int)
-                5) power supply wattage (int)
-            3 things it can do:
-                1) run web browser
-                2) run adobe photoshop
-                3) consume electricity
-            */
-            float clockFrequency{4.0f};
-            int ramAmount{32};
-            int storageAmount{512};
-            int numCores{};
-            int powerSupplyWattage{550};
-        };
-
-        struct Car
-        {
-            /*
-             5 properties:
-                1) the color of the car (string)
-                2) the horsepower (int)
-                3) the cost (float)
-                4) the brand (string)
-                5) the year (int)
-            3 things it can do:
-                1) play music
-                2) drive
-                3) consume fuel
-             */
-
-            struct Fuel
-            {
-                int octaneRating{91};
-                float costPerGallon{4.55};
-                std::string CountryOfOrigin{"Saudi Arabia"};
-                std::string distributer{"Shell"};
-                std::string color{"clear"};
-
-                void burn();
-                void smell();
-                void flow();
-            };
-
-            int runWebBrowser(); //returns exit code of application
-            int runAdobePhotoshop(); //returns exit code of application
-            int consumeElectricity(); //returns amount of energy consumed in watt hours
-
-            std::string carColor{"white"};
-            int horsePower{200};
-            float cost{32'000.f};
-            std::string brand{"Honda"};
-            int year{1997};
-
-            void playMusic();
-            void drive();
-            void putFuelInCar(Fuel fule);
-            float consumeFuel(); // return the fuel consumed in gallon
-
-        };
-
-        struct CellPhone
-        {
-            /*
-             5 properties:
-                1) the color of the Phone (string)
-                2) the data provider for the phone (string)
-                3) the brand of the phone (string)
-                4) the processor of the phone (string)
-                5) the amount of ram of phone (int)
-            3 things it can do:
-                1) make calls
-                2) browse web
-                3) play music
-             */
-
-            struct Case
-            {
-                std::string color{"black"};
-                std::string brand{"Spigen"};
-                float cost{12.99f};
-                std::string features{"kickstand"};
-                bool isPadded{true};
-
-                void wrapPhone();
-                void providePadding();
-                void preventScratches();
-            };
-
-            std::string color{"blue"};
-            std::string dataProvider{"AT&T"};
-            std::string brand{"Samsung"};
-            std::string processor{"Qualcomm 865"};
-            int ramAmount{12};
-
-            void makeCall();
-            void browseWeb();
-            void playMusic();
-
-            void changePhoneCase(Case phoneCase);
-        };
-
-        struct Screen
-        {
-            /*
-             5 properties:
-                1) brand (string)
-                2) refresh rate (int)
-                3) pixels x (int)
-                4) pixels y (int)
-                5) connectors (string)
-            3 things it can do:
-                1) display images
-                2) adjust color settings
-                3) adjust refresh rate
-             */
-
-            std::string brand{"Dell"};
-            int refreshRate{75};
-            int pixelsX{920};
-            int pixelsY{560};
-            std::string connectors{"HDMI"};
-
-            void displayImages();
-            void adjustColorSettings();
-            void adjustRefreshRate();
-        };
-
-        struct CPU
-        {
-            /*
-             5 properties:
-                1) frequency in GHz (float)
-                2) cache in Mb (int)
-                3) number of cores (int)
-                4) architecture (string)
-                5) size of process in nm (int)
-            3 things it can do:
-                1) add numbers
-                2) jump
-                3) load data
-             */
-
-            float frequency{4.0f};
-            int amountCache{20};
-            int numCores{10};
-            std::string architecture{"x86"};
-            int nodeProcessSize{14};
-
-            int addNumbers(int num1, int num2); //returns the result of addition.
-            int jump(int offset); //returns the new address after the offset is added to curr address.
-            int loadDate(int address); //returns the loaded data after gets from memory.
-        };
-
-        struct GraphicsCard
-        {
-            /*
-             5 properties:
-                1) Cuda cores (int)
-                2) RT cores (int)
-                3) VRAM (int)
-                4) brand (string)
-                5) frequency in Ghz (float)
-            3 things it can do:
-                1) vector operations
-                2) matrix operations
-                3) texture operations
-             */
-
-            int numCudaCores{4000};
-            int numRTCores{72};
-            int amountVRAM{8};
-            std::string brand{"NVIDIA"};
-            float frequency{2.1};
-
-            void vectorOperations();
-            void matrixOperations();
-            void textureOperations();
-        };
-
-        struct RAM
-        {
-            /*
-             5 properties:
-                1) quantity in GBs (int)
-                2) transfer rate (int)
-                3) generation (string)
-                4) brand (string)
-                5) cost (float)
-            3 things it can do:
-                1) write values
-                2) read values
-                3) display rgb lights
-             */
-
-            int numGBs{32};
-            int transferRate{3700};
-            std::string generation{"DDR4"};
-            std::string brand{"Corsair"};
-            float cost{124.99f};
-
-            void writeData(int data);
-            int readData(int address);  //reads data at given address
-            void displayLights();
-        };
-
-        struct MotherBoard
-        {
-            /*
-             5 properties:
-                1) Form factor (string)
-                2) socket type (string)
-                3) expandison slots (string)
-                4) ram slots (string)
-                5) i/o ports (string)
-            3 things it can do:
-                1) transfer data from cpu to ram
-                2) transfer data from gpu to cpu
-                3) transfer data from io ports to cpu
-             */
-
-            std::string formFactor{"form factor"};
-            std::string socketType{"LGA"};
-            std::string expansionSlots{"expansion slots"};
-            std::string ramSlots{"ram slots"};
-            std::string IOPorts{"io ports"};
-
-            void transferDataFromCPUToRAM();
-            void transferDataFromGPUToCPU();
-            void transferDataFromIOToCPU();
-        };
-
-        struct PowerSupply
-        {
-            /*
-             5 properties:
-                1) wattage (int)
-                2) efficiency rating (string)
-                3) form factor (string)
-                4) modularity (string)
-                5) connectors (string)
-            3 things it can do:
-                1) turn ac into dc
-                2) provide electricity to components
-                3) regulate voltage
-             */
-
-            int wattage{550};
-            std::string efficientRating{"efficient rating"};
-            std::string formFactor{"80+ gold"};
-            std::string modularity{"modular"};
-            std::string connectors{"connectors"};
-
-            void TurnACToDC();
-            void provideElectricity();
-            void regulateVoltage();
-        };
-
-        struct Desktop
-        {
-            /*
-             5 properties:
-                1) CPU
-                2) Graphics Card
-                3) RAM
-                4) Motherboard
-                5) Power Supply
-            3 things it can do:
-                1) gaming
-                2) web browsing
-                3) code compile
-             */
-
-            CPU cpu{};
-            GraphicsCard graphicsCard{};
-            RAM ram{};
-            MotherBoard motherBoard{};
-            PowerSupply powerSupply{};
-
-            void game();
-            void browseWeb();
-            void compileCode();
-        };
 /*
 =================
 Part 1e - Step 12: Commit
@@ -2196,28 +870,9 @@ Part 1e - Step 13: Assignment
  */
 
 
-        struct Display  //UDT 5
-        {
-            /* empty just to make the example easy to follow */
-        };
-        struct Memory       { }; //UDT 6
-        struct CPU          { }; //UDT 7
-        struct Radio        { }; //UDT 8
-        struct Applications { }; //UDT 9
-
 //UDT 10, from Part 1c example
-        struct CellPhone
-        {
-            Display display;            //a member variabledeclaration of an instance of UDT 5
-            Memory memory;              //a member variabledeclaration of an instance of UDT 6
-            CPU cpu;                    //a member variabledeclaration of an instance of UDT 7
-            Radio radio;                //a member variabledeclaration of an instance of UDT 8
-            Applications applications;  //a member variabledeclaration of an instance of UDT 9
-
-            bool makeACall(std::string number); //returns true if the call connected
-            bool sendAText(std::string number, std::string messageToSend); //returns true if the text was sent
-            int runApplication(std::string applicationName); //returns how much memory (bytes) the application asked for
-        };
+        
+        
         /*
        =================
        Part 1e - Step 14: Commit
@@ -2274,12 +929,294 @@ paste your code below
 */
 
 
+    struct Computer
+    {
+        /*
+         5 properties:
+            1) the frequency of processor (float)
+            2) the amount of ram (int)
+            3) the amount of storage (int)
+            4) the number of cores in cpu (int)
+            5) power supply wattage (int)
+        3 things it can do:
+            1) run web browser
+            2) run adobe photoshop
+            3) consume electricity
+        */
+        float clockFrequency{4.0f};
+        int ramAmount{32};
+        int storageAmount{512};
+        int numCores{};
+        int powerSupplyWattage{550};
+    };
 
+    struct Car
+    {
+        /*
+         5 properties:
+            1) the color of the car (string)
+            2) the horsepower (int)
+            3) the cost (float)
+            4) the brand (string)
+            5) the year (int)
+        3 things it can do:
+            1) play music
+            2) drive
+            3) consume fuel
+         */
 
+        struct Fuel
+        {
+            int octaneRating{91};
+            float costPerGallon{4.55f};
+            std::string CountryOfOrigin{"Saudi Arabia"};
+            std::string distributer{"Shell"};
+            std::string color{"clear"};
 
+            void burn();
+            void smell();
+            void flow();
+        };
 
+        int runWebBrowser(); //returns exit code of application
+        int runAdobePhotoshop(); //returns exit code of application
+        int consumeElectricity(); //returns amount of energy consumed in watt hours
 
+        std::string carColor{"white"};
+        int horsePower{200};
+        float cost{32'000.f};
+        std::string brand{"Honda"};
+        int year{1997};
 
+        void playMusic();
+        void drive();
+        void putFuelInCar(Fuel fule);
+        float consumeFuel(); // return the fuel consumed in gallon
+
+    };
+
+    struct CellPhone
+    {
+        /*
+         5 properties:
+            1) the color of the Phone (string)
+            2) the data provider for the phone (string)
+            3) the brand of the phone (string)
+            4) the processor of the phone (string)
+            5) the amount of ram of phone (int)
+        3 things it can do:
+            1) make calls
+            2) browse web
+            3) play music
+         */
+
+        struct Case
+        {
+            std::string color{"black"};
+            std::string brand{"Spigen"};
+            float cost{12.99f};
+            std::string features{"kickstand"};
+            bool isPadded{true};
+
+            void wrapPhone();
+            void providePadding();
+            void preventScratches();
+        };
+
+        std::string color{"blue"};
+        std::string dataProvider{"AT&T"};
+        std::string brand{"Samsung"};
+        std::string processor{"Qualcomm 865"};
+        int ramAmount{12};
+
+        void makeCall();
+        void browseWeb();
+        void playMusic();
+
+        void changePhoneCase(Case phoneCase);
+    };
+
+    struct Screen
+    {
+        /*
+         5 properties:
+            1) brand (string)
+            2) refresh rate (int)
+            3) pixels x (int)
+            4) pixels y (int)
+            5) connectors (string)
+        3 things it can do:
+            1) display images
+            2) adjust color settings
+            3) adjust refresh rate
+         */
+
+        std::string brand{"Dell"};
+        int refreshRate{75};
+        int pixelsX{920};
+        int pixelsY{560};
+        std::string connectors{"HDMI"};
+
+        void displayImages();
+        void adjustColorSettings();
+        void adjustRefreshRate();
+    };
+
+    struct CPU
+    {
+        /*
+         5 properties:
+            1) frequency in GHz (float)
+            2) cache in Mb (int)
+            3) number of cores (int)
+            4) architecture (string)
+            5) size of process in nm (int)
+        3 things it can do:
+            1) add numbers
+            2) jump
+            3) load data
+         */
+
+        float frequency{4.0f};
+        int amountCache{20};
+        int numCores{10};
+        std::string architecture{"x86"};
+        int nodeProcessSize{14};
+
+        int addNumbers(int num1, int num2); //returns the result of addition.
+        int jump(int offset); //returns the new address after the offset is added to curr address.
+        int loadDate(int address); //returns the loaded data after gets from memory.
+    };
+
+    struct GraphicsCard
+    {
+        /*
+         5 properties:
+            1) Cuda cores (int)
+            2) RT cores (int)
+            3) VRAM (int)
+            4) brand (string)
+            5) frequency in Ghz (float)
+        3 things it can do:
+            1) vector operations
+            2) matrix operations
+            3) texture operations
+         */
+
+        int numCudaCores{4000};
+        int numRTCores{72};
+        int amountVRAM{8};
+        std::string brand{"NVIDIA"};
+        float frequency{2.1f};
+
+        void vectorOperations();
+        void matrixOperations();
+        void textureOperations();
+    };
+
+    struct RAM
+    {
+        /*
+         5 properties:
+            1) quantity in GBs (int)
+            2) transfer rate (int)
+            3) generation (string)
+            4) brand (string)
+            5) cost (float)
+        3 things it can do:
+            1) write values
+            2) read values
+            3) display rgb lights
+         */
+
+        int numGBs{32};
+        int transferRate{3700};
+        std::string generation{"DDR4"};
+        std::string brand{"Corsair"};
+        float cost{124.99f};
+
+        void writeData(int data);
+        int readData(int address);  //reads data at given address
+        void displayLights();
+    };
+
+    struct MotherBoard
+    {
+        /*
+         5 properties:
+            1) Form factor (string)
+            2) socket type (string)
+            3) expandison slots (string)
+            4) ram slots (string)
+            5) i/o ports (string)
+        3 things it can do:
+            1) transfer data from cpu to ram
+            2) transfer data from gpu to cpu
+            3) transfer data from io ports to cpu
+         */
+
+        std::string formFactor{"form factor"};
+        std::string socketType{"LGA"};
+        std::string expansionSlots{"expansion slots"};
+        std::string ramSlots{"ram slots"};
+        std::string IOPorts{"io ports"};
+
+        void transferDataFromCPUToRAM();
+        void transferDataFromGPUToCPU();
+        void transferDataFromIOToCPU();
+    };
+
+    struct PowerSupply
+    {
+        /*
+         5 properties:
+            1) wattage (int)
+            2) efficiency rating (string)
+            3) form factor (string)
+            4) modularity (string)
+            5) connectors (string)
+        3 things it can do:
+            1) turn ac into dc
+            2) provide electricity to components
+            3) regulate voltage
+         */
+
+        int wattage{550};
+        std::string efficientRating{"efficient rating"};
+        std::string formFactor{"80+ gold"};
+        std::string modularity{"modular"};
+        std::string connectors{"connectors"};
+
+        void TurnACToDC();
+        void provideElectricity();
+        void regulateVoltage();
+    };
+
+    struct Desktop
+    {
+        /*
+         5 properties:
+            1) CPU
+            2) Graphics Card
+            3) RAM
+            4) Motherboard
+            5) Power Supply
+        3 things it can do:
+            1) gaming
+            2) web browsing
+            3) code compile
+         */
+
+        CPU cpu{};
+        GraphicsCard graphicsCard{};
+        RAM ram{};
+        MotherBoard motherBoard{};
+        PowerSupply powerSupply{};
+
+        void game();
+        void browseWeb();
+        void compileCode();
+    };
 
 int main()
 {
