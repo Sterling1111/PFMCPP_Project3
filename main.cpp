@@ -590,28 +590,28 @@ Goal: Convert your 10 Plain-English UDTs into code.
 Task: define an empty struct below your plain-English UDT.
 - Do this for all 10 UDTs
 */
-    namespace Part1E_Step1
-    {
+namespace Part1E_Step1
+{
 /*
 
 my plain-English UDT:
 
 Thing 1): Car Wash
-    5 properties:
-        1) number of vacuum cleaners
-        2) number of eco-friendly cleaning supplies
-        3) stores the amount of water used per week.
-        4) stores amount of profit made per week
-        5) number of cars serviced per day
-    3 things it can do:
-        1) wash and wax car
-        2) charge customer
-        3) detail the car interior
- */
-        struct CarWash  //This is the empty struct, below my plain-English UDT.
-        {
-            //notice that no code is written inside the curly braces.
-        };
+5 properties:
+    1) number of vacuum cleaners
+    2) number of eco-friendly cleaning supplies
+    3) stores the amount of water used per week.
+    4) stores amount of profit made per week
+    5) number of cars serviced per day
+3 things it can do:
+    1) wash and wax car
+    2) charge customer
+    3) detail the car interior
+*/
+    struct CarWash  //This is the empty struct, below my plain-English UDT.
+    {
+        //notice that no code is written inside the curly braces.
+    };
 
 /*
 Notice that the struct name 'CarWash' conforms with the Course Coding Standard, described in the Readme.MD
@@ -625,32 +625,32 @@ Now that you've made changes, make a commit!
 Be sure to make the commit message meaningful.
 */
 
-    } //end namespace Part1E_Step1
+} //end namespace Part1E_Step1
 
-    namespace Part1E_Step3
-    {
+namespace Part1E_Step3
+{
 /*
 =================
 Part 1e - Step 3: Assignment
 =================
-    - Below your plain-English UDT, Copy your 5 properties & 3 actions into the empty struct body.
-    - comment them out.
-    - Do this for all 10 UDTs
-    */
+- Below your plain-English UDT, Copy your 5 properties & 3 actions into the empty struct body.
+- comment them out.
+- Do this for all 10 UDTs
+*/
 
-        struct CarWash
-        {
-            //5 properties:
-            //    - number of vacuum cleaners
-            //    - number of eco-friendly cleaning supplies
-            //    - stores the amount of water used per week.
-            //    - stores amount of profit made per week
-            //    - number of cars serviced per day
-            //3 things it can do:
-            //    - wash and wax car
-            //    - charge customer
-            //    - detail the car interior
-        };
+    struct CarWash
+    {
+        //5 properties:
+        //    - number of vacuum cleaners
+        //    - number of eco-friendly cleaning supplies
+        //    - stores the amount of water used per week.
+        //    - stores amount of profit made per week
+        //    - number of cars serviced per day
+        //3 things it can do:
+        //    - wash and wax car
+        //    - charge customer
+        //    - detail the car interior
+    };
 
 /*
 =================
@@ -659,35 +659,35 @@ Part 1e - Step 4: Commit
 Now that you've made changes, make a commit!
 Be sure to make the commit message meaningful.
 */
-    }  //end namespace Part1E_Step3
+}  //end namespace Part1E_Step3
 
-    namespace Part1E_Step5
-    {
+namespace Part1E_Step5
+{
 /*
 =================
 Part 1e - Step 5: Assignment
 =================
-    - declare your member variables using camelCase versions of the plain-english properties
-    - give the member variables relevant data types and reasonable default values
-    - Do this for all 10 UDTs
- */
-        struct CarWash
-        {
-            //number of vacuum cleaners
-            int numVacuumCleaners = 3;
-            //number of eco-friendly cleaning supplies
-            int numEcoFriendlyCleaningSupplies = 20;
-            //stores the amount of water used per week.
-            float waterUsedPerWeek = 200.f;
-            //stores amount of profit made per week
-            float profitPerWeek = 495.95f;
-            //number of cars serviced per day
-            int numberOfCarsServiced = 10;
-            //3 things it can do:
-            //    - wash and wax car
-            //    - charge customer
-            //    - detail the car interior
-        };
+- declare your member variables using camelCase versions of the plain-english properties
+- give the member variables relevant data types and reasonable default values
+- Do this for all 10 UDTs
+*/
+    struct CarWash
+    {
+        //number of vacuum cleaners
+        int numVacuumCleaners = 3;
+        //number of eco-friendly cleaning supplies
+        int numEcoFriendlyCleaningSupplies = 20;
+        //stores the amount of water used per week.
+        float waterUsedPerWeek = 200.f;
+        //stores amount of profit made per week
+        float profitPerWeek = 495.95f;
+        //number of cars serviced per day
+        int numberOfCarsServiced = 10;
+        //3 things it can do:
+        //    - wash and wax car
+        //    - charge customer
+        //    - detail the car interior
+    };
 /*
 
 =================
@@ -696,41 +696,41 @@ Part 1e - Step 6: Commit
 Now that you've made changes, make a commit!
 Be sure to make the commit message meaningful.
 */
-    }  //end namespace Part1E_Step5
+}  //end namespace Part1E_Step5
 
-    namespace Part1E_Step7
-    {
+namespace Part1E_Step7
+{
 /*
 =================
 Part 1e - Step 7: Assignment
 =================
-  - declare your member functions underneath each plain-English comment in your struct's body.
-  - add function parameters where it makes sense to have them.
-  - if your functions return something other than 'void', add a comment explaining what is being returned.  see the example code below.
-  */
-        struct CarWash
-        {
-            //number of vacuum cleaners
-            int numVacuumCleaners = 3;
-            //number of eco-friendly cleaning supplies
-            int numEcoFriendlyCleaningSupplies = 20;
-            //stores the amount of water used per week.
-            float waterUsedPerWeek = 200.f;
-            //stores amount of profit made per week
-            float profitPerWeek = 495.95f;
-            //number of cars serviced per day
-            int numberOfCarsServiced = 10;
+- declare your member functions underneath each plain-English comment in your struct's body.
+- add function parameters where it makes sense to have them.
+- if your functions return something other than 'void', add a comment explaining what is being returned.  see the example code below.
+*/
+    struct CarWash
+    {
+        //number of vacuum cleaners
+        int numVacuumCleaners = 3;
+        //number of eco-friendly cleaning supplies
+        int numEcoFriendlyCleaningSupplies = 20;
+        //stores the amount of water used per week.
+        float waterUsedPerWeek = 200.f;
+        //stores amount of profit made per week
+        float profitPerWeek = 495.95f;
+        //number of cars serviced per day
+        int numberOfCarsServiced = 10;
 
-            //3 things it can do:
-            //wash and wax car
-            void washAndWaxCar();
+        //3 things it can do:
+        //wash and wax car
+        void washAndWaxCar();
 
-            //charge customer       //NOTE: function parameter is relevant to the work that the function performs
-            float chargeCustomer(float discountPercentage); //returns the total amount charged.
+        //charge customer       //NOTE: function parameter is relevant to the work that the function performs
+        float chargeCustomer(float discountPercentage); //returns the total amount charged.
 
-            //detail the car interior
-            void detailInterior();
-        };
+        //detail the car interior
+        void detailInterior();
+    };
 /*
 =================
 Part 1e - Step 10: Commit
@@ -738,19 +738,19 @@ Part 1e - Step 10: Commit
 Now that you've made changes, make a commit!
 Be sure to make the commit message meaningful.
 */
-    } // end namespace Part1E_Step9
+} // end namespace Part1E_Step9
 
-    namespace Part1E_Step11
-    {
+namespace Part1E_Step11
+{
 /*
 =================
 Part 1e - Step 11: Assignment
 =================
 4) make the function parameter lists for your UDTs' member functions use some of your User-Defined Types.
-    - You'll write definitions/implementations for these functions in Project3 Part2
-    - you'll call each of these functions in Project3 part3
-    - You can use the nested classes you just created.  see the example code below
-    - You can also declare instances of these nested classes as member variables, but the intended usage must make sense and must compile without errors.  see the note below the example code.
+- You'll write definitions/implementations for these functions in Project3 Part2
+- you'll call each of these functions in Project3 part3
+- You can use the nested classes you just created.  see the example code below
+- You can also declare instances of these nested classes as member variables, but the intended usage must make sense and must compile without errors.  see the note below the example code.
 
 Remember: in C++ you cannot use something before it is declared.
 The compiler parses the files from top to bottom.
@@ -758,95 +758,95 @@ This means you can only use a UDT AFTER you have written the closing curly brace
 
 Keep this in mind when you define the function parameter lists to use some of your User-Defined Types.
 */
-        struct CarWash
+    struct CarWash
+    {
+        //number of vacuum cleaners
+        int numVacuumCleaners = 3;
+        //number of eco-friendly cleaning supplies
+        int numEcoFriendlyCleaningSupplies = 20;
+        //stores the amount of water used per week.
+        float waterUsedPerWeek = 200.f;
+        //stores amount of profit made per week
+        float profitPerWeek = 495.95f;
+        //number of cars serviced per day
+        int numberOfCarsServiced = 10;
+
+        struct Car
         {
-            //number of vacuum cleaners
-            int numVacuumCleaners = 3;
-            //number of eco-friendly cleaning supplies
-            int numEcoFriendlyCleaningSupplies = 20;
-            //stores the amount of water used per week.
-            float waterUsedPerWeek = 200.f;
-            //stores amount of profit made per week
-            float profitPerWeek = 495.95f;
-            //number of cars serviced per day
-            int numberOfCarsServiced = 10;
+            bool isAPickupTruck = false;
+            float gasMileage = 26.2f;
+            int year = 1985;
+            std::string manufacturer = "Toyota";
+            std::string model = "Corolla";
 
-            struct Car
-            {
-                bool isAPickupTruck = false;
-                float gasMileage = 26.2f;
-                int year = 1985;
-                std::string manufacturer = "Toyota";
-                std::string model = "Corolla";
-
-                void fillTank(float costPerGallon, double fuelAmountInGallons = 2.0, bool requiresDiesel = false);
-                void breakDown(std::string failureType, bool requiresTow = false);
-                int getMilesTraveledAnnually(bool includeUberLyftTrips);
-            };
-
-            //wash and wax car
-            void washAndWaxCar(Car car); //a member function whose parameter is a UDT.
-            //Notice that `Car car` is written AFTER `struct Car { ... };
-
-            //charge customer
-            float chargeCustomer(float discountPercentage);
-            //detail interior
-            void detailInterior(Car car);
-
-            //5) a member variable whose type is a UDT.
-            Car carBeingServiced; //Notice that this is written AFTER `struct Car { ... };
-
-            /*
-            A Note regarding functions that use UDTs in their parameter list:
-            Pay attention to the member functions that take an instance of 'Car'
-            Notice that there is a member variable of the same type.
-
-            It makes sense to pass a Car to the function 'washAndWaxCar' because car washes service MANY cars
-            However, they only service ONE car at a time.
-            the carBeingServiced's value would change every time you wash and wax the car.
-
-            I see many students who write code emulating this format, but their usage does not make logical sense.
-            Consider the following snippet:
-
-            struct SoccerTeam
-            {
-                struct Manager
-                {
-                    ...
-                };
-
-                // train their skills
-                void trainPlayerSkills(Manager managerA);
-
-                Manager teamManager;
-            };
-
-            It does not make sense to pass in a new Manager whenever you are going to train your team players.
-            Soccer teams have ONE manager.
-
-            a much more relevant usage would be adding a member function that hires a new manager:
-
-            struct SoccerTeam
-            {
-                struct Manager
-                {
-                    ...
-                };
-
-                void hireNewManager(Manager newManager);
-
-                Manager teamManager;
-            };
-
-            We can safely assume that the 'Manager' instance that is being passed to that function will be replacing the current 'teamManager' variable without looking at any other code.
-            This is because the function name and function argument clearly indicate what they are/what they do.
-
-            Your function names and parameter names should make LOGICAL SENSE.
-            Readers of your code should be able to INTUITIVELY understand what your function implementations will do without actually seeing the implementations.
-
-            Keep this in mind when you define your UDTs in this project part.
-            */
+            void fillTank(float costPerGallon, double fuelAmountInGallons = 2.0, bool requiresDiesel = false);
+            void breakDown(std::string failureType, bool requiresTow = false);
+            int getMilesTraveledAnnually(bool includeUberLyftTrips);
         };
+
+        //wash and wax car
+        void washAndWaxCar(Car car); //a member function whose parameter is a UDT.
+        //Notice that `Car car` is written AFTER `struct Car { ... };
+
+        //charge customer
+        float chargeCustomer(float discountPercentage);
+        //detail interior
+        void detailInterior(Car car);
+
+        //5) a member variable whose type is a UDT.
+        Car carBeingServiced; //Notice that this is written AFTER `struct Car { ... };
+
+        /*
+        A Note regarding functions that use UDTs in their parameter list:
+        Pay attention to the member functions that take an instance of 'Car'
+        Notice that there is a member variable of the same type.
+
+        It makes sense to pass a Car to the function 'washAndWaxCar' because car washes service MANY cars
+        However, they only service ONE car at a time.
+        the carBeingServiced's value would change every time you wash and wax the car.
+
+        I see many students who write code emulating this format, but their usage does not make logical sense.
+        Consider the following snippet:
+
+        struct SoccerTeam
+        {
+            struct Manager
+            {
+                ...
+            };
+
+            // train their skills
+            void trainPlayerSkills(Manager managerA);
+
+            Manager teamManager;
+        };
+
+        It does not make sense to pass in a new Manager whenever you are going to train your team players.
+        Soccer teams have ONE manager.
+
+        a much more relevant usage would be adding a member function that hires a new manager:
+
+        struct SoccerTeam
+        {
+            struct Manager
+            {
+                ...
+            };
+
+            void hireNewManager(Manager newManager);
+
+            Manager teamManager;
+        };
+
+        We can safely assume that the 'Manager' instance that is being passed to that function will be replacing the current 'teamManager' variable without looking at any other code.
+        This is because the function name and function argument clearly indicate what they are/what they do.
+
+        Your function names and parameter names should make LOGICAL SENSE.
+        Readers of your code should be able to INTUITIVELY understand what your function implementations will do without actually seeing the implementations.
+
+        Keep this in mind when you define your UDTs in this project part.
+        */
+    };
 
 /*
 =================
@@ -855,40 +855,40 @@ Part 1e - Step 12: Commit
 Now that you've made changes, make a commit!
 Be sure to make the commit message meaningful.
 */
-    } //end namespace Part1E_Step11
+} //end namespace Part1E_Step11
 
-    namespace Part1E_Step13
-    {
+namespace Part1E_Step13
+{
 /*
 =================
 Part 1e - Step 13: Assignment
 =================
 6) your 10th UDT's properties should be instances of your #5-#9 UDTs.
-    - No primitives allowed!
-    - see the example below, which uses the 10th UDT example from Part 1C
-    note: the example UDTs 5-9 below are empty, solely for the purpose of keeping the example easy to understand
- */
+- No primitives allowed!
+- see the example below, which uses the 10th UDT example from Part 1C
+note: the example UDTs 5-9 below are empty, solely for the purpose of keeping the example easy to understand
+*/
 
 
 //UDT 10, from Part 1c example
-        
-        
-        /*
-       =================
-       Part 1e - Step 14: Commit
-       =================
-       Now that you've made changes, make a commit!
-       Be sure to make the commit message meaningful.
-       */
-    } // end namespace Part1E_Step13
+    
+    
     /*
-    =================
-   Part 1e - Step 15: Assignment
    =================
-   7) After you finish defining each type, click the [run] button.
-       Clear up any errors or warnings as best you can.
-       if your code produces a [-Wpadded] warning, add '-Wno-padded' to the .replit file with the other compiler flags (-Weverything -Wno-missing-prototypes etc etc)
-    */
+   Part 1e - Step 14: Commit
+   =================
+   Now that you've made changes, make a commit!
+   Be sure to make the commit message meaningful.
+   */
+} // end namespace Part1E_Step13
+/*
+=================
+Part 1e - Step 15: Assignment
+=================
+7) After you finish defining each type, click the [run] button.
+   Clear up any errors or warnings as best you can.
+   if your code produces a [-Wpadded] warning, add '-Wno-padded' to the .replit file with the other compiler flags (-Weverything -Wno-missing-prototypes etc etc)
+*/
 
 /*
 =================
@@ -929,294 +929,294 @@ paste your code below
 */
 
 
-    struct Computer
+struct Computer
+{
+    /*
+     5 properties:
+        1) the frequency of processor (float)
+        2) the amount of ram (int)
+        3) the amount of storage (int)
+        4) the number of cores in cpu (int)
+        5) power supply wattage (int)
+    3 things it can do:
+        1) run web browser
+        2) run adobe photoshop
+        3) consume electricity
+    */
+    float clockFrequency{4.0f};
+    int ramAmount{32};
+    int storageAmount{512};
+    int numCores{};
+    int powerSupplyWattage{550};
+};
+
+struct Car
+{
+    /*
+     5 properties:
+        1) the color of the car (string)
+        2) the horsepower (int)
+        3) the cost (float)
+        4) the brand (string)
+        5) the year (int)
+    3 things it can do:
+        1) play music
+        2) drive
+        3) consume fuel
+     */
+
+    struct Fuel
     {
-        /*
-         5 properties:
-            1) the frequency of processor (float)
-            2) the amount of ram (int)
-            3) the amount of storage (int)
-            4) the number of cores in cpu (int)
-            5) power supply wattage (int)
-        3 things it can do:
-            1) run web browser
-            2) run adobe photoshop
-            3) consume electricity
-        */
-        float clockFrequency{4.0f};
-        int ramAmount{32};
-        int storageAmount{512};
-        int numCores{};
-        int powerSupplyWattage{550};
+        int octaneRating{91};
+        float costPerGallon{4.55f};
+        std::string CountryOfOrigin{"Saudi Arabia"};
+        std::string distributer{"Shell"};
+        std::string color{"clear"};
+
+        void burn();
+        void smell();
+        void flow();
     };
 
-    struct Car
+    int runWebBrowser(); //returns exit code of application
+    int runAdobePhotoshop(); //returns exit code of application
+    int consumeElectricity(); //returns amount of energy consumed in watt hours
+
+    std::string carColor{"white"};
+    int horsePower{200};
+    float cost{32'000.f};
+    std::string brand{"Honda"};
+    int year{1997};
+
+    void playMusic();
+    void drive();
+    void putFuelInCar(Fuel fule);
+    float consumeFuel(); // return the fuel consumed in gallon
+
+};
+
+struct CellPhone
+{
+    /*
+     5 properties:
+        1) the color of the Phone (string)
+        2) the data provider for the phone (string)
+        3) the brand of the phone (string)
+        4) the processor of the phone (string)
+        5) the amount of ram of phone (int)
+    3 things it can do:
+        1) make calls
+        2) browse web
+        3) play music
+     */
+
+    struct Case
     {
-        /*
-         5 properties:
-            1) the color of the car (string)
-            2) the horsepower (int)
-            3) the cost (float)
-            4) the brand (string)
-            5) the year (int)
-        3 things it can do:
-            1) play music
-            2) drive
-            3) consume fuel
-         */
+        std::string color{"black"};
+        std::string brand{"Spigen"};
+        float cost{12.99f};
+        std::string features{"kickstand"};
+        bool isPadded{true};
 
-        struct Fuel
-        {
-            int octaneRating{91};
-            float costPerGallon{4.55f};
-            std::string CountryOfOrigin{"Saudi Arabia"};
-            std::string distributer{"Shell"};
-            std::string color{"clear"};
-
-            void burn();
-            void smell();
-            void flow();
-        };
-
-        int runWebBrowser(); //returns exit code of application
-        int runAdobePhotoshop(); //returns exit code of application
-        int consumeElectricity(); //returns amount of energy consumed in watt hours
-
-        std::string carColor{"white"};
-        int horsePower{200};
-        float cost{32'000.f};
-        std::string brand{"Honda"};
-        int year{1997};
-
-        void playMusic();
-        void drive();
-        void putFuelInCar(Fuel fule);
-        float consumeFuel(); // return the fuel consumed in gallon
-
+        void wrapPhone();
+        void providePadding();
+        void preventScratches();
     };
 
-    struct CellPhone
-    {
-        /*
-         5 properties:
-            1) the color of the Phone (string)
-            2) the data provider for the phone (string)
-            3) the brand of the phone (string)
-            4) the processor of the phone (string)
-            5) the amount of ram of phone (int)
-        3 things it can do:
-            1) make calls
-            2) browse web
-            3) play music
-         */
+    std::string color{"blue"};
+    std::string dataProvider{"AT&T"};
+    std::string brand{"Samsung"};
+    std::string processor{"Qualcomm 865"};
+    int ramAmount{12};
 
-        struct Case
-        {
-            std::string color{"black"};
-            std::string brand{"Spigen"};
-            float cost{12.99f};
-            std::string features{"kickstand"};
-            bool isPadded{true};
+    void makeCall();
+    void browseWeb();
+    void playMusic();
 
-            void wrapPhone();
-            void providePadding();
-            void preventScratches();
-        };
+    void changePhoneCase(Case phoneCase);
+};
 
-        std::string color{"blue"};
-        std::string dataProvider{"AT&T"};
-        std::string brand{"Samsung"};
-        std::string processor{"Qualcomm 865"};
-        int ramAmount{12};
+struct Screen
+{
+    /*
+     5 properties:
+        1) brand (string)
+        2) refresh rate (int)
+        3) pixels x (int)
+        4) pixels y (int)
+        5) connectors (string)
+    3 things it can do:
+        1) display images
+        2) adjust color settings
+        3) adjust refresh rate
+     */
 
-        void makeCall();
-        void browseWeb();
-        void playMusic();
+    std::string brand{"Dell"};
+    int refreshRate{75};
+    int pixelsX{920};
+    int pixelsY{560};
+    std::string connectors{"HDMI"};
 
-        void changePhoneCase(Case phoneCase);
-    };
+    void displayImages();
+    void adjustColorSettings();
+    void adjustRefreshRate();
+};
 
-    struct Screen
-    {
-        /*
-         5 properties:
-            1) brand (string)
-            2) refresh rate (int)
-            3) pixels x (int)
-            4) pixels y (int)
-            5) connectors (string)
-        3 things it can do:
-            1) display images
-            2) adjust color settings
-            3) adjust refresh rate
-         */
+struct CPU
+{
+    /*
+     5 properties:
+        1) frequency in GHz (float)
+        2) cache in Mb (int)
+        3) number of cores (int)
+        4) architecture (string)
+        5) size of process in nm (int)
+    3 things it can do:
+        1) add numbers
+        2) jump
+        3) load data
+     */
 
-        std::string brand{"Dell"};
-        int refreshRate{75};
-        int pixelsX{920};
-        int pixelsY{560};
-        std::string connectors{"HDMI"};
+    float frequency{4.0f};
+    int amountCache{20};
+    int numCores{10};
+    std::string architecture{"x86"};
+    int nodeProcessSize{14};
 
-        void displayImages();
-        void adjustColorSettings();
-        void adjustRefreshRate();
-    };
+    int addNumbers(int num1, int num2); //returns the result of addition.
+    int jump(int offset); //returns the new address after the offset is added to curr address.
+    int loadDate(int address); //returns the loaded data after gets from memory.
+};
 
-    struct CPU
-    {
-        /*
-         5 properties:
-            1) frequency in GHz (float)
-            2) cache in Mb (int)
-            3) number of cores (int)
-            4) architecture (string)
-            5) size of process in nm (int)
-        3 things it can do:
-            1) add numbers
-            2) jump
-            3) load data
-         */
+struct GraphicsCard
+{
+    /*
+     5 properties:
+        1) Cuda cores (int)
+        2) RT cores (int)
+        3) VRAM (int)
+        4) brand (string)
+        5) frequency in Ghz (float)
+    3 things it can do:
+        1) vector operations
+        2) matrix operations
+        3) texture operations
+     */
 
-        float frequency{4.0f};
-        int amountCache{20};
-        int numCores{10};
-        std::string architecture{"x86"};
-        int nodeProcessSize{14};
+    int numCudaCores{4000};
+    int numRTCores{72};
+    int amountVRAM{8};
+    std::string brand{"NVIDIA"};
+    float frequency{2.1f};
 
-        int addNumbers(int num1, int num2); //returns the result of addition.
-        int jump(int offset); //returns the new address after the offset is added to curr address.
-        int loadDate(int address); //returns the loaded data after gets from memory.
-    };
+    void vectorOperations();
+    void matrixOperations();
+    void textureOperations();
+};
 
-    struct GraphicsCard
-    {
-        /*
-         5 properties:
-            1) Cuda cores (int)
-            2) RT cores (int)
-            3) VRAM (int)
-            4) brand (string)
-            5) frequency in Ghz (float)
-        3 things it can do:
-            1) vector operations
-            2) matrix operations
-            3) texture operations
-         */
+struct RAM
+{
+    /*
+     5 properties:
+        1) quantity in GBs (int)
+        2) transfer rate (int)
+        3) generation (string)
+        4) brand (string)
+        5) cost (float)
+    3 things it can do:
+        1) write values
+        2) read values
+        3) display rgb lights
+     */
 
-        int numCudaCores{4000};
-        int numRTCores{72};
-        int amountVRAM{8};
-        std::string brand{"NVIDIA"};
-        float frequency{2.1f};
+    int numGBs{32};
+    int transferRate{3700};
+    std::string generation{"DDR4"};
+    std::string brand{"Corsair"};
+    float cost{124.99f};
 
-        void vectorOperations();
-        void matrixOperations();
-        void textureOperations();
-    };
+    void writeData(int data);
+    int readData(int address);  //reads data at given address
+    void displayLights();
+};
 
-    struct RAM
-    {
-        /*
-         5 properties:
-            1) quantity in GBs (int)
-            2) transfer rate (int)
-            3) generation (string)
-            4) brand (string)
-            5) cost (float)
-        3 things it can do:
-            1) write values
-            2) read values
-            3) display rgb lights
-         */
+struct MotherBoard
+{
+    /*
+     5 properties:
+        1) Form factor (string)
+        2) socket type (string)
+        3) expandison slots (string)
+        4) ram slots (string)
+        5) i/o ports (string)
+    3 things it can do:
+        1) transfer data from cpu to ram
+        2) transfer data from gpu to cpu
+        3) transfer data from io ports to cpu
+     */
 
-        int numGBs{32};
-        int transferRate{3700};
-        std::string generation{"DDR4"};
-        std::string brand{"Corsair"};
-        float cost{124.99f};
+    std::string formFactor{"form factor"};
+    std::string socketType{"LGA"};
+    std::string expansionSlots{"expansion slots"};
+    std::string ramSlots{"ram slots"};
+    std::string IOPorts{"io ports"};
 
-        void writeData(int data);
-        int readData(int address);  //reads data at given address
-        void displayLights();
-    };
+    void transferDataFromCPUToRAM();
+    void transferDataFromGPUToCPU();
+    void transferDataFromIOToCPU();
+};
 
-    struct MotherBoard
-    {
-        /*
-         5 properties:
-            1) Form factor (string)
-            2) socket type (string)
-            3) expandison slots (string)
-            4) ram slots (string)
-            5) i/o ports (string)
-        3 things it can do:
-            1) transfer data from cpu to ram
-            2) transfer data from gpu to cpu
-            3) transfer data from io ports to cpu
-         */
+struct PowerSupply
+{
+    /*
+     5 properties:
+        1) wattage (int)
+        2) efficiency rating (string)
+        3) form factor (string)
+        4) modularity (string)
+        5) connectors (string)
+    3 things it can do:
+        1) turn ac into dc
+        2) provide electricity to components
+        3) regulate voltage
+     */
 
-        std::string formFactor{"form factor"};
-        std::string socketType{"LGA"};
-        std::string expansionSlots{"expansion slots"};
-        std::string ramSlots{"ram slots"};
-        std::string IOPorts{"io ports"};
+    int wattage{550};
+    std::string efficientRating{"efficient rating"};
+    std::string formFactor{"80+ gold"};
+    std::string modularity{"modular"};
+    std::string connectors{"connectors"};
 
-        void transferDataFromCPUToRAM();
-        void transferDataFromGPUToCPU();
-        void transferDataFromIOToCPU();
-    };
+    void TurnACToDC();
+    void provideElectricity();
+    void regulateVoltage();
+};
 
-    struct PowerSupply
-    {
-        /*
-         5 properties:
-            1) wattage (int)
-            2) efficiency rating (string)
-            3) form factor (string)
-            4) modularity (string)
-            5) connectors (string)
-        3 things it can do:
-            1) turn ac into dc
-            2) provide electricity to components
-            3) regulate voltage
-         */
+struct Desktop
+{
+    /*
+     5 properties:
+        1) CPU
+        2) Graphics Card
+        3) RAM
+        4) Motherboard
+        5) Power Supply
+    3 things it can do:
+        1) gaming
+        2) web browsing
+        3) code compile
+     */
 
-        int wattage{550};
-        std::string efficientRating{"efficient rating"};
-        std::string formFactor{"80+ gold"};
-        std::string modularity{"modular"};
-        std::string connectors{"connectors"};
+    CPU cpu{};
+    GraphicsCard graphicsCard{};
+    RAM ram{};
+    MotherBoard motherBoard{};
+    PowerSupply powerSupply{};
 
-        void TurnACToDC();
-        void provideElectricity();
-        void regulateVoltage();
-    };
-
-    struct Desktop
-    {
-        /*
-         5 properties:
-            1) CPU
-            2) Graphics Card
-            3) RAM
-            4) Motherboard
-            5) Power Supply
-        3 things it can do:
-            1) gaming
-            2) web browsing
-            3) code compile
-         */
-
-        CPU cpu{};
-        GraphicsCard graphicsCard{};
-        RAM ram{};
-        MotherBoard motherBoard{};
-        PowerSupply powerSupply{};
-
-        void game();
-        void browseWeb();
-        void compileCode();
-    };
+    void game();
+    void browseWeb();
+    void compileCode();
+};
 
 int main()
 {
