@@ -108,7 +108,51 @@ struct CarWash
     You'll need to insert the Person struct from the video in the space below.
  */
 
+struct Foot
+{
+    int distance;
 
+    int stepForward();
+    int stepSize();
+};
+
+int Foot::stepForward()
+{
+    return stepSize();
+}
+
+int Foot::stepSize()
+{
+    return distance;
+}
+
+struct Person 
+{
+    int age;
+    int height;
+    float hairLength;
+    float GPA;
+    unsigned int SATScore;
+    int distanceTraveled;
+    Foot leftFoot;
+    Foot rightFoot;
+
+    int run(bool startWithLeftFoot);
+
+    
+};
+
+int Person::run(bool startWithLeftFoot) 
+{
+    if(startWithLeftFoot == true)
+    {
+        return leftFoot.stepForward() + rightFoot.stepForward();
+    }
+    else
+    {
+        return rightFoot.stepForward() + leftFoot.stepForward();
+    }
+}
 
 
 
@@ -134,18 +178,6 @@ struct CarWash
 
 struct Computer
 {
-    /*
-     5 properties:
-        1) the frequency of processor (float)
-        2) the amount of ram (int)
-        3) the amount of storage (int)
-        4) the number of cores in cpu (int)
-        5) power supply wattage (int)
-    3 things it can do:
-        1) run web browser
-        2) run adobe photoshop
-        3) consume electricity
-    */
     float clockFrequency{4.0f};
     int ramAmount{32};
     int storageAmount{512};
@@ -157,21 +189,23 @@ struct Computer
     void consumeElectricity();
 };
 
+void Computer::launchWebBrowser()
+{
+    std::cout << "Launching web browser...\n";
+}
+
+void Computer::launchAdobePhotoshop()
+{
+    std::cout << "Launching Adobe Photoshop...\n";
+}
+
+void Computer::consumeElectricity()
+{
+    std::cout << "Consuming electricity...\n";
+}
+
 struct Car
 {
-    /*
-     5 properties:
-        1) the color of the car (string)
-        2) the horsepower (int)
-        3) the cost (float)
-        4) the brand (string)
-        5) the year (int)
-    3 things it can do:
-        1) play music
-        2) drive
-        3) consume fuel
-     */
-
     struct Fuel
     {
         int octaneRating{91};
@@ -202,21 +236,44 @@ struct Car
 
 };
 
+void Car::playMusic()
+{
+    std::cout << "Playing music...\n";
+}
+
+void Car::drive()
+{
+    std::cout << "Driving...\n";
+}
+
+void Car::putFuelInCar(Car::Fuel fuel)
+{
+    std::cout << "Putting fuel in car from " << fuel.distributer << "...\n";
+}
+
+float Car::consumeFuel()
+{
+    std::cout << "Consuming fuel...\n";
+    return 0.0f;  // replace with actual implementation
+}
+
+void Car::Fuel::burn()
+{
+    std::cout << "Burning fuel...\n";
+}
+
+void Car::Fuel::smell()
+{
+    std::cout << "Smelling fuel...\n";
+}
+
+void Car::Fuel::flow()
+{
+    std::cout << "Fuel is flowing...\n";
+}
+
 struct CellPhone
 {
-    /*
-     5 properties:
-        1) the color of the Phone (string)
-        2) the data provider for the phone (string)
-        3) the brand of the phone (string)
-        4) the processor of the phone (string)
-        5) the amount of ram of phone (int)
-    3 things it can do:
-        1) make calls
-        2) browse web
-        3) play music
-     */
-
     struct Case
     {
         std::string color{"black"};
@@ -243,21 +300,43 @@ struct CellPhone
     void changePhoneCase(Case phoneCase);
 };
 
+void CellPhone::makeCall()
+{
+    std::cout << "Making call...\n";
+}
+
+void CellPhone::browseWeb()
+{
+    std::cout << "Browsing web...\n";
+}
+
+void CellPhone::playMusic()
+{
+    std::cout << "Playing music...\n";
+}
+
+void CellPhone::changePhoneCase(CellPhone::Case newPhoneCase)
+{
+    std::cout << "Changing phone case to " << newPhoneCase.brand << "...\n";
+}
+
+void CellPhone::Case::wrapPhone()
+{
+    std::cout << "Wrapping phone...\n";
+}
+
+void CellPhone::Case::providePadding()
+{
+    std::cout << "Providing padding...\n";
+}
+
+void CellPhone::Case::preventScratches()
+{
+    std::cout << "Preventing scratches...\n";
+}
+
 struct Screen
 {
-    /*
-     5 properties:
-        1) brand (string)
-        2) refresh rate (int)
-        3) pixels x (int)
-        4) pixels y (int)
-        5) connectors (string)
-    3 things it can do:
-        1) display images
-        2) adjust color settings
-        3) adjust refresh rate
-     */
-
     std::string brand{"Dell"};
     int refreshRate{75};
     int pixelsX{920};
@@ -269,21 +348,23 @@ struct Screen
     void adjustRefreshRate();
 };
 
+void Screen::displayImages()
+{
+    std::cout << "Displaying images...\n";
+}
+
+void Screen::adjustColorSettings()
+{
+    std::cout << "Adjusting color settings...\n";
+}
+
+void Screen::adjustRefreshRate()
+{
+    std::cout << "Adjusting refresh rate...\n";
+}
+
 struct CPU
 {
-    /*
-     5 properties:
-        1) frequency in GHz (float)
-        2) cache in Mb (int)
-        3) number of cores (int)
-        4) architecture (string)
-        5) size of process in nm (int)
-    3 things it can do:
-        1) add numbers
-        2) jump
-        3) load data
-     */
-
     float frequency{4.0f};
     int amountCache{20};
     int numCores{10};
@@ -295,21 +376,23 @@ struct CPU
     int loadDate(int address); //returns the loaded data after gets from memory.
 };
 
+int CPU::addNumbers(int num1, int num2)
+{
+    return num1 + num2;
+}
+
+int CPU::jump(int offset)
+{
+    return offset;
+}
+
+int CPU::loadDate(int address)
+{
+    return address;
+}
+
 struct GraphicsCard
 {
-    /*
-     5 properties:
-        1) Cuda cores (int)
-        2) RT cores (int)
-        3) VRAM (int)
-        4) brand (string)
-        5) frequency in Ghz (float)
-    3 things it can do:
-        1) vector operations
-        2) matrix operations
-        3) texture operations
-     */
-
     int numCudaCores{4000};
     int numRTCores{72};
     int amountVRAM{8};
@@ -321,21 +404,23 @@ struct GraphicsCard
     void multiplyTwoMatrices(); //should take 2 matrices
 };
 
+void GraphicsCard::rotateMatrix()
+{
+    std::cout << "Rotating matrix...\n";
+}
+
+void GraphicsCard::multipleMatrixByScalar(double scalar)
+{
+    std::cout << "Multiplying matrix by " << scalar << " ...\n";
+}
+
+void GraphicsCard::multiplyTwoMatrices()
+{
+    std::cout << "Multiplying two matrices...\n";
+}
+
 struct RAM
 {
-    /*
-     5 properties:
-        1) quantity in GBs (int)
-        2) transfer rate (int)
-        3) generation (string)
-        4) brand (string)
-        5) cost (float)
-    3 things it can do:
-        1) write values
-        2) read values
-        3) display rgb lights
-     */
-
     int numGBs{32};
     int transferRate{3700};
     std::string generation{"DDR4"};
@@ -347,21 +432,23 @@ struct RAM
     void displayLights();
 };
 
+void RAM::writeData(int data)
+{
+    std::cout << "Writing data " << data << " to RAM...\n";
+}
+
+int RAM::readData(int address)
+{
+    return address; // implementation depends on actual memory management
+}
+
+void RAM::displayLights()
+{
+    std::cout << "Displaying lights...\n";
+}
+
 struct MotherBoard
 {
-    /*
-     5 properties:
-        1) Form factor (string)
-        2) socket type (string)
-        3) expandison slots (string)
-        4) ram slots (string)
-        5) i/o ports (string)
-    3 things it can do:
-        1) transfer data from cpu to ram
-        2) transfer data from gpu to cpu
-        3) transfer data from io ports to cpu
-     */
-
     std::string formFactor{"form factor"};
     std::string socketType{"LGA"};
     std::string expansionSlots{"expansion slots"};
@@ -373,21 +460,24 @@ struct MotherBoard
     void transferDataFromIOToCPU();
 };
 
+void MotherBoard::transferDataFromCPUToRAM()
+{
+    std::cout << "Transferring data from CPU to RAM...\n";
+}
+
+void MotherBoard::transferDataFromGPUToCPU()
+{
+    std::cout << "Transferring data from GPU to CPU...\n";
+}
+
+void MotherBoard::transferDataFromIOToCPU()
+{
+    std::cout << "Transferring data from IO to CPU...\n";
+}
+
+
 struct PowerSupply
 {
-    /*
-     5 properties:
-        1) wattage (int)
-        2) efficiency rating (string)
-        3) form factor (string)
-        4) modularity (string)
-        5) connectors (string)
-    3 things it can do:
-        1) turn ac into dc
-        2) provide electricity to components
-        3) regulate voltage
-     */
-
     int wattage{550};
     std::string efficientRating{"efficient rating"};
     std::string formFactor{"80+ gold"};
@@ -399,21 +489,23 @@ struct PowerSupply
     void regulateVoltage();
 };
 
+void PowerSupply::turnACToDC()
+{
+    std::cout << "Turning AC to DC...\n";
+}
+
+void PowerSupply::provideElectricity()
+{
+    std::cout << "Providing electricity...\n";
+}
+
+void PowerSupply::regulateVoltage()
+{
+    std::cout << "Regulating voltage...\n";
+}
+
 struct Desktop
 {
-    /*
-     5 properties:
-        1) CPU
-        2) Graphics Card
-        3) RAM
-        4) Motherboard
-        5) Power Supply
-    3 things it can do:
-        1) gaming
-        2) web browsing
-        3) code compile
-     */
-
     CPU cpu{};
     GraphicsCard graphicsCard{};
     RAM ram{};
@@ -424,6 +516,21 @@ struct Desktop
     void browseWeb();
     void compileCode();
 };
+
+void Desktop::runGame(std::string nameOfGameToLaunch)
+{
+    std::cout << "Running game " << nameOfGameToLaunch << "...\n";
+}
+
+void Desktop::browseWeb()
+{
+    std::cout << "Browsing web...\n";
+}
+
+void Desktop::compileCode()
+{
+    std::cout << "Compiling code...\n";
+}
 
 int main()
 {
