@@ -76,6 +76,8 @@ int main()
 
 struct Computer
 {
+    Computer();
+    
     float clockFrequency{4.0f};
     int ramAmount{32};
     int storageAmount{512};
@@ -86,6 +88,11 @@ struct Computer
     void launchAdobePhotoshop();
     void consumeElectricity();
 };
+
+Computer::Computer()
+{
+    std::cout << "Computer being constructed" << std::endl;
+}
 
 void Computer::launchWebBrowser()
 {
@@ -104,8 +111,12 @@ void Computer::consumeElectricity()
 
 struct Car
 {
+    Car();
+
     struct Fuel
     {
+        Fuel();
+
         int octaneRating{91};
         float costPerGallon{4.55f};
         std::string CountryOfOrigin{"Saudi Arabia"};
@@ -134,6 +145,11 @@ struct Car
 
 };
 
+Car::Car() 
+{
+    std::cout << "Car being constructed" << std::endl;
+}
+
 void Car::playMusic()
 {
     std::cout << "Playing music...\n";
@@ -155,6 +171,11 @@ float Car::consumeFuel()
     return 0.0f;  // replace with actual implementation
 }
 
+Car::Fuel::Fuel()
+{
+    std::cout << "Fuel being constructed" << std::endl;
+}
+
 void Car::Fuel::burn()
 {
     std::cout << "Burning fuel...\n";
@@ -172,8 +193,12 @@ void Car::Fuel::flow()
 
 struct CellPhone
 {
+    CellPhone();
+
     struct Case
     {
+        Case();
+
         std::string color{"black"};
         std::string brand{"Spigen"};
         float cost{12.99f};
@@ -198,6 +223,11 @@ struct CellPhone
     void changePhoneCase(Case phoneCase);
 };
 
+CellPhone::CellPhone() 
+{
+    std::cout << "CellPhone being constructed" << std::endl;
+}
+
 void CellPhone::makeCall()
 {
     std::cout << "Making call...\n";
@@ -218,6 +248,11 @@ void CellPhone::changePhoneCase(CellPhone::Case newPhoneCase)
     std::cout << "Changing phone case to " << newPhoneCase.brand << "...\n";
 }
 
+CellPhone::Case::Case() 
+{
+    std::cout << "Case being constructed" << std::endl;
+}
+
 void CellPhone::Case::wrapPhone()
 {
     std::cout << "Wrapping phone...\n";
@@ -235,6 +270,8 @@ void CellPhone::Case::preventScratches()
 
 struct Screen
 {
+    Screen();
+
     std::string brand{"Dell"};
     int refreshRate{75};
     int pixelsX{920};
@@ -245,6 +282,11 @@ struct Screen
     void adjustColorSettings();
     void adjustRefreshRate();
 };
+
+Screen::Screen() 
+{
+    std::cout << "Screen being constructed" << std::endl;
+}
 
 void Screen::displayImages()
 {
@@ -263,6 +305,8 @@ void Screen::adjustRefreshRate()
 
 struct CPU
 {
+    CPU();
+
     float frequency{4.0f};
     int amountCache{20};
     int numCores{10};
@@ -273,6 +317,11 @@ struct CPU
     int jump(int offset); //returns the new address after the offset is added to curr address.
     int loadDate(int address); //returns the loaded data after gets from memory.
 };
+
+CPU::CPU() 
+{
+    std::cout << "CPU being constructed" << std::endl;
+}
 
 int CPU::addNumbers(int num1, int num2)
 {
@@ -291,6 +340,8 @@ int CPU::loadDate(int address)
 
 struct GraphicsCard
 {
+    GraphicsCard();
+
     int numCudaCores{4000};
     int numRTCores{72};
     int amountVRAM{8};
@@ -301,6 +352,11 @@ struct GraphicsCard
     void multipleMatrixByScalar(double scalar);
     void multiplyTwoMatrices(); //should take 2 matrices
 };
+
+GraphicsCard::GraphicsCard() 
+{
+    std::cout << "GraphicsCard being constructed" << std::endl;
+}
 
 void GraphicsCard::rotateMatrix()
 {
@@ -319,6 +375,8 @@ void GraphicsCard::multiplyTwoMatrices()
 
 struct RAM
 {
+    RAM();
+
     int numGBs{32};
     int transferRate{3700};
     std::string generation{"DDR4"};
@@ -329,6 +387,11 @@ struct RAM
     int readData(int address);  //reads data at given address
     void displayLights();
 };
+
+RAM::RAM() 
+{
+    std::cout << "RAM being constructed" << std::endl;
+}
 
 void RAM::writeData(int data)
 {
@@ -347,6 +410,8 @@ void RAM::displayLights()
 
 struct MotherBoard
 {
+    MotherBoard();
+
     std::string formFactor{"form factor"};
     std::string socketType{"LGA"};
     std::string expansionSlots{"expansion slots"};
@@ -357,6 +422,11 @@ struct MotherBoard
     void transferDataFromGPUToCPU();
     void transferDataFromIOToCPU();
 };
+
+MotherBoard::MotherBoard() 
+{
+    std::cout << "MotherBoard being constructed" << std::endl;
+}
 
 void MotherBoard::transferDataFromCPUToRAM()
 {
@@ -376,6 +446,8 @@ void MotherBoard::transferDataFromIOToCPU()
 
 struct PowerSupply
 {
+    PowerSupply();
+
     int wattage{550};
     std::string efficientRating{"efficient rating"};
     std::string formFactor{"80+ gold"};
@@ -386,6 +458,11 @@ struct PowerSupply
     void provideElectricity();
     void regulateVoltage();
 };
+
+PowerSupply::PowerSupply() 
+{
+    std::cout << "PowerSupply being constructed" << std::endl;
+}
 
 void PowerSupply::turnACToDC()
 {
@@ -404,6 +481,8 @@ void PowerSupply::regulateVoltage()
 
 struct Desktop
 {
+    Desktop();
+
     CPU cpu{};
     GraphicsCard graphicsCard{};
     RAM ram{};
@@ -414,6 +493,11 @@ struct Desktop
     void browseWeb();
     void compileCode();
 };
+
+Desktop::Desktop() 
+{
+    std::cout << "Desktop being constructed" << std::endl;
+}
 
 void Desktop::runGame(std::string nameOfGameToLaunch)
 {
@@ -434,6 +518,171 @@ int main()
 {
     Example::main();
 
+    //Computer
+    Computer computer;
+    
+    computer.launchWebBrowser();
+    computer.launchAdobePhotoshop();
+    computer.consumeElectricity();
+
+    std::cout << "Computer details: \n"
+              << "Clock Frequency: " << computer.clockFrequency << " GHz\n"
+              << "RAM Amount: " << computer.ramAmount << " GB\n"
+              << "Storage Amount: " << computer.storageAmount << " GB\n"
+              << "Number of Cores: " << computer.numCores << "\n"
+              << "Power Supply Wattage: " << computer.powerSupplyWattage << " W\n";
+
+
+    //Fuel
+    Car::Fuel fuel;
+
+    fuel.burn();
+    fuel.smell();
+    fuel.flow();
+
+    std::cout << "Fuel details: \n"
+              << "Octane Rating: " << fuel.octaneRating << "\n"
+              << "Cost Per Gallon: " << fuel.costPerGallon << " $/gallon\n"
+              << "Country of Origin: " << fuel.CountryOfOrigin << "\n"
+              << "Distributer: " << fuel.distributer << "\n"
+              << "Color: " << fuel.color << "\n";
+
+
+    //Car
+    Car car;
+    
+    car.playMusic();
+    car.drive();
+    car.putFuelInCar(fuel);
+    car.consumeFuel();
+
+    std::cout << "Car details: \n"
+              << "Color: " << car.carColor << "\n"
+              << "Horse Power: " << car.horsePower << "\n"
+              << "Cost: " << car.cost << " $\n"
+              << "Brand: " << car.brand << "\n"
+              << "Year: " << car.year << "\n";
+
+    //Case
+    CellPhone::Case phoneCase;
+
+    phoneCase.wrapPhone();
+    phoneCase.providePadding();
+    phoneCase.preventScratches();
+
+    std::cout << "Phone Case details: \n"
+              << "Color: " << phoneCase.color << "\n"
+              << "Brand: " << phoneCase.brand << "\n"
+              << "Cost: " << phoneCase.cost << " $\n"
+              << "Features: " << phoneCase.features << "\n"
+              << "Is Padded? " << (phoneCase.isPadded ? "Yes" : "No") << "\n";
+
+    //CellPhone
+    CellPhone cellPhone;
+    
+    cellPhone.makeCall();
+    cellPhone.browseWeb();
+    cellPhone.playMusic();
+    cellPhone.changePhoneCase(phoneCase);
+
+    std::cout << "CellPhone details: \n"
+              << "Color: " << cellPhone.color << "\n"
+              << "Data Provider: " << cellPhone.dataProvider << "\n"
+              << "Brand: " << cellPhone.brand << "\n"
+              << "Processor: " << cellPhone.processor << "\n"
+              << "RAM Amount: " << cellPhone.ramAmount << " GB\n";
+
+    //Screen
+    Screen screen;
+
+    screen.displayImages();
+    screen.adjustColorSettings();
+    screen.adjustRefreshRate();
+
+    std::cout << "Screen details: \n"
+              << "Brand: " << screen.brand << "\n"
+              << "Refresh Rate: " << screen.refreshRate << " Hz\n"
+              << "Resolution: " << screen.pixelsX << "x" << screen.pixelsY << "\n"
+              << "Connectors: " << screen.connectors << "\n";
+
+    //CPU
+    CPU cpu;
+
+    std::cout << cpu.addNumbers(3, 5) << std::endl;
+    std::cout << cpu.jump(5) << std::endl;
+    std::cout << cpu.loadDate(36) << std::endl;
+
+    std::cout << "CPU details: \n"
+              << "Frequency: " << cpu.frequency << " GHz\n"
+              << "Cache Amount: " << cpu.amountCache << " MB\n"
+              << "Number of Cores: " << cpu.numCores << "\n"
+              << "Architecture: " << cpu.architecture << "\n"
+              << "Node Process Size: " << cpu.nodeProcessSize << " nm\n";
+
+    //GraphicsCard
+    GraphicsCard graphicsCard;
+
+    graphicsCard.rotateMatrix();
+    graphicsCard.multipleMatrixByScalar(3.0);
+    graphicsCard.multiplyTwoMatrices();
+
+    std::cout << "Graphics Card details: \n"
+              << "Number of CUDA Cores: " << graphicsCard.numCudaCores << "\n"
+              << "Number of RT Cores: " << graphicsCard.numRTCores << "\n"
+              << "Amount of VRAM: " << graphicsCard.amountVRAM << " GB\n"
+              << "Brand: " << graphicsCard.brand << "\n"
+              << "Frequency: " << graphicsCard.frequency << " GHz\n";
+
+    //RAM
+    RAM ram;
+
+    ram.writeData(36);
+    std::cout << ram.readData(360) << std::endl;
+    ram.displayLights();
+
+    std::cout << "RAM details: \n"
+              << "Number of GBs: " << ram.numGBs << "\n"
+              << "Transfer Rate: " << ram.transferRate << " MT/s\n"
+              << "Generation: " << ram.generation << "\n"
+              << "Brand: " << ram.brand << "\n"
+              << "Cost: $" << ram.cost << "\n";
+
+    //Motherboard
+    MotherBoard motherBoard;
+
+    motherBoard.transferDataFromCPUToRAM();
+    motherBoard.transferDataFromGPUToCPU();
+    motherBoard.transferDataFromIOToCPU();
+
+    std::cout << "Motherboard details: \n"
+              << "Form Factor: " << motherBoard.formFactor << "\n"
+              << "Socket Type: " << motherBoard.socketType << "\n"
+              << "Expansion Slots: " << motherBoard.expansionSlots << "\n"
+              << "RAM Slots: " << motherBoard.ramSlots << "\n"
+              << "IO Ports: " << motherBoard.IOPorts << "\n";
+
+    //PowerSuppy
+    PowerSupply powerSupply;
+
+    powerSupply.turnACToDC();
+    powerSupply.provideElectricity();
+    powerSupply.regulateVoltage();
+
+    std::cout << "Power Supply details: \n"
+              << "Wattage: " << powerSupply.wattage << "\n"
+              << "Efficiency Rating: " << powerSupply.efficientRating << "\n"
+              << "Form Factor: " << powerSupply.formFactor << "\n"
+              << "Modularity: " << powerSupply.modularity << "\n"
+              << "Connectors: " << powerSupply.connectors << "\n";
+
+    //Desktop
+    Desktop desktop;
+
+    desktop.runGame("game");
+    desktop.browseWeb();
+    desktop.compileCode();
+
+    //dont have print outs for the member variables because i already printed out values for such types above.
     
     std::cout << "good to go!" << std::endl;
 }
