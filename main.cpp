@@ -40,15 +40,12 @@ int main()
 //call Example::main()
 
 
-
-
-
 struct Computer
 {
     Computer();
     
     float clockFrequency{4.0f};
-    int ramAmount{32};
+    int ramAmount;
     int storageAmount{512};
     int numCores{};
     int powerSupplyWattage{550};
@@ -58,13 +55,14 @@ struct Computer
     void consumeElectricity();
 };
 
-Computer::Computer()
+Computer::Computer() : ramAmount{16}
 {
     std::cout << "Computer being constructed" << std::endl;
 }
 
 void Computer::launchWebBrowser()
 {
+    std::cout << clockFrequency << " " << ramAmount << std::endl;
     std::cout << "Launching web browser...\n";
 }
 
@@ -86,7 +84,7 @@ struct Car
     {
         Fuel();
 
-        int octaneRating{91};
+        int octaneRating;
         float costPerGallon{4.55f};
         std::string CountryOfOrigin{"Saudi Arabia"};
         std::string distributer{"Shell"};
@@ -97,11 +95,7 @@ struct Car
         void flow();
     };
 
-    int runWebBrowser(); //returns exit code of application
-    int runAdobePhotoshop(); //returns exit code of application
-    int consumeElectricity(); //returns amount of energy consumed in watt hours
-
-    std::string carColor{"white"};
+    std::string carColor;
     int horsePower{200};
     float cost{32'000.f};
     std::string brand{"Honda"};
@@ -114,7 +108,7 @@ struct Car
 
 };
 
-Car::Car() 
+Car::Car() : carColor{"green"}
 {
     std::cout << "Car being constructed" << std::endl;
 }
@@ -126,6 +120,7 @@ void Car::playMusic()
 
 void Car::drive()
 {
+    std::cout << carColor << std::endl;
     std::cout << "Driving...\n";
 }
 
@@ -140,13 +135,14 @@ float Car::consumeFuel()
     return 0.0f;  // replace with actual implementation
 }
 
-Car::Fuel::Fuel()
+Car::Fuel::Fuel() : octaneRating{98}
 {
     std::cout << "Fuel being constructed" << std::endl;
 }
 
 void Car::Fuel::burn()
 {
+    std::cout << octaneRating << std::endl;
     std::cout << "Burning fuel...\n";
 }
 
@@ -168,7 +164,7 @@ struct CellPhone
     {
         Case();
 
-        std::string color{"black"};
+        std::string color;
         std::string brand{"Spigen"};
         float cost{12.99f};
         std::string features{"kickstand"};
@@ -179,7 +175,7 @@ struct CellPhone
         void preventScratches();
     };
 
-    std::string color{"blue"};
+    std::string color;
     std::string dataProvider{"AT&T"};
     std::string brand{"Samsung"};
     std::string processor{"Qualcomm 865"};
@@ -192,13 +188,14 @@ struct CellPhone
     void changePhoneCase(Case phoneCase);
 };
 
-CellPhone::CellPhone() 
+CellPhone::CellPhone() : color{"red"}
 {
     std::cout << "CellPhone being constructed" << std::endl;
 }
 
 void CellPhone::makeCall()
 {
+    std::cout << color << std::endl;
     std::cout << "Making call...\n";
 }
 
@@ -224,6 +221,7 @@ CellPhone::Case::Case()
 
 void CellPhone::Case::wrapPhone()
 {
+    std::cout << color << std::endl;
     std::cout << "Wrapping phone...\n";
 }
 
@@ -241,7 +239,7 @@ struct Screen
 {
     Screen();
 
-    std::string brand{"Dell"};
+    std::string brand;
     int refreshRate{75};
     int pixelsX{920};
     int pixelsY{560};
@@ -252,13 +250,14 @@ struct Screen
     void adjustRefreshRate();
 };
 
-Screen::Screen() 
+Screen::Screen() : brand{"Dell"}
 {
     std::cout << "Screen being constructed" << std::endl;
 }
 
 void Screen::displayImages()
 {
+    std::cout << brand << std::endl;
     std::cout << "Displaying images...\n";
 }
 
@@ -276,7 +275,7 @@ struct CPU
 {
     CPU();
 
-    float frequency{4.0f};
+    float frequency;
     int amountCache{20};
     int numCores{10};
     std::string architecture{"x86"};
@@ -287,13 +286,14 @@ struct CPU
     int loadDate(int address); //returns the loaded data after gets from memory.
 };
 
-CPU::CPU() 
+CPU::CPU() : frequency{4.0f}
 {
     std::cout << "CPU being constructed" << std::endl;
 }
 
 int CPU::addNumbers(int num1, int num2)
 {
+    std::cout << frequency << std::endl;
     return num1 + num2;
 }
 
@@ -311,7 +311,7 @@ struct GraphicsCard
 {
     GraphicsCard();
 
-    int numCudaCores{4000};
+    int numCudaCores;
     int numRTCores{72};
     int amountVRAM{8};
     std::string brand{"NVIDIA"};
@@ -322,13 +322,14 @@ struct GraphicsCard
     void multiplyTwoMatrices(); //should take 2 matrices
 };
 
-GraphicsCard::GraphicsCard() 
+GraphicsCard::GraphicsCard() : numCudaCores{4000}
 {
     std::cout << "GraphicsCard being constructed" << std::endl;
 }
 
 void GraphicsCard::rotateMatrix()
 {
+    std::cout << numCudaCores << std::endl;
     std::cout << "Rotating matrix...\n";
 }
 
@@ -346,7 +347,7 @@ struct RAM
 {
     RAM();
 
-    int numGBs{32};
+    int numGBs;
     int transferRate{3700};
     std::string generation{"DDR4"};
     std::string brand{"Corsair"};
@@ -357,13 +358,14 @@ struct RAM
     void displayLights();
 };
 
-RAM::RAM() 
+RAM::RAM() : numGBs{32}
 {
     std::cout << "RAM being constructed" << std::endl;
 }
 
 void RAM::writeData(int data)
 {
+    std::cout << numGBs << std::endl;
     std::cout << "Writing data " << data << " to RAM...\n";
 }
 
@@ -381,7 +383,7 @@ struct MotherBoard
 {
     MotherBoard();
 
-    std::string formFactor{"form factor"};
+    std::string formFactor;
     std::string socketType{"LGA"};
     std::string expansionSlots{"expansion slots"};
     std::string ramSlots{"ram slots"};
@@ -392,13 +394,14 @@ struct MotherBoard
     void transferDataFromIOToCPU();
 };
 
-MotherBoard::MotherBoard() 
+MotherBoard::MotherBoard() : formFactor{"formFactor"}
 {
     std::cout << "MotherBoard being constructed" << std::endl;
 }
 
 void MotherBoard::transferDataFromCPUToRAM()
 {
+    std::cout << formFactor << std::endl;
     std::cout << "Transferring data from CPU to RAM...\n";
 }
 
@@ -417,7 +420,7 @@ struct PowerSupply
 {
     PowerSupply();
 
-    int wattage{550};
+    int wattage;
     std::string efficientRating{"efficient rating"};
     std::string formFactor{"80+ gold"};
     std::string modularity{"modular"};
@@ -428,13 +431,14 @@ struct PowerSupply
     void regulateVoltage();
 };
 
-PowerSupply::PowerSupply() 
+PowerSupply::PowerSupply() : wattage{650}
 {
     std::cout << "PowerSupply being constructed" << std::endl;
 }
 
 void PowerSupply::turnACToDC()
 {
+    std::cout << wattage << std::endl;
     std::cout << "Turning AC to DC...\n";
 }
 
@@ -470,6 +474,7 @@ Desktop::Desktop()
 
 void Desktop::runGame(std::string nameOfGameToLaunch)
 {
+    std::cout << cpu.frequency << std::endl;
     std::cout << "Running game " << nameOfGameToLaunch << "...\n";
 }
 
