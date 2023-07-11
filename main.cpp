@@ -1,85 +1,51 @@
 /*
- Project 3 - Part 3 / 5
- video: Chapter 2 - Part 8
- Constructors tasks
+ Project 3 - Part 4 / 5
+ video: Chapter 2 - Part 9
+ Member initialization tasks
 
- Create a branch named Part3
+ Create a branch named Part4
 
- On this new branch:
+ 1) do this for each class in this project:
+    initialize some of your member variables either in-class or in the Constructor member initializer list.
+    Show me that you understand how to use these language features.
 
- 0) if you opted to not fill in any of your member functions in part2, 
-    fill in ALL of your member functions
-    
- 1) Add a constructor for each User-Defined-Type.
-    The constructor should be the first declaration in your UDT, before all member variables and member functions.
-    add a std::cout message in the constructor that prints out the name of the class being constructed.  
-    When you run your code, you'll see the order that your objects are created in the program output. 
- 
- 2) For each User-Defined-Type:
-        amend some of the member functions to print out something interesting via std::cout
- 
- 3) Instantiate 1 or 2 instances of EACH of your user-defined types in the main() function.  
-    You should have at least 12 different variables declared in main(), because you have written 12 different types (including the nested types)
+ 2) make some of your member functions use those initialized member variables via std::cout statements.
 
- 4) For each instantiated UDT: 
-        call each of that instance's member functions.
-        You're doing this to show that your code doesn't produce warnings when you call the functions that take arguments.
- 
- 5) add some std::cout statements in main() that print out your UDT's member variable values or values returned from your UDT member functions (if they return values)
- 
- After you finish defining each type/function:
- click the [run] button.  Clear up any errors or warnings as best you can.
+ 3) click the [run] button.  Clear up any errors or warnings as best you can.
  if your code produces a -Wpadded warning, add '-Wno-padded' to the .replit file with the other compiler flags (-Weverything -Wno-missing-prototypes etc etc)
- 
- example:
  */
 
 #include <iostream>
-namespace Example 
+namespace Example
 {
-struct UDT  // my user defined type named 'UDT'
-{
-    int thing = 0; //a member variable
-    UDT();              //1) the constructor
-    void printThing();  //the member function
-};
+    struct UDT
+    {
+        int a; //a member variable that IS NOT initialized in-class
+        float b { 2.f }; //a member variable that IS initialized in-class
+        UDT() : a(0) { } // 'constructor-initializer-list' initializing the member that wasn't initialized in-class.
+        void printAandB()  //the member function
+        {
+            std::cout << "UDT::printAandB() a:" << a << " b: " << b << std::endl;  //2) printing out something interesting
+        }
+    };
 
-//the function definitions are outside of the class
-UDT::UDT()
-{
-    std::cout << "UDT being constructed!" << std::endl; //1) 
+    int main()
+    {
+        UDT foo; //instantiating a Foo in main()
+        foo.printAandB(); //calling a member function of the instance that was instantiated.
+        return 0;
+    }
 }
 
-void UDT::printThing()
-{
-    std::cout << "UDT::printThing() " << thing << std::endl;  //2) printing out something interesting
-}
-
-int main()
-{
-    UDT foo;              //3) instantiating a UDT named 'foo' in main()
-    foo.printThing();     //4) calling a member function of the UDT instance.
-    
-    //5) a std::cout statement accessing foo's member variable.
-    //It also demonstrates a 'ternary expression', which is syntactic shorthand for an 'if/else' expression
-    std::cout << "Is foo's member var 'thing' equal to 0? " << (foo.thing == 0 ? "Yes" : "No") << "\n";
-    
-    return 0;
-}
-} //end namespace Example
-
-//insert Example::main() into main() of user's repo.
-
-
-
+//call Example::main()
 
 
 struct Computer
 {
     Computer();
-    
+
     float clockFrequency{4.0f};
-    int ramAmount{32};
+    int ramAmount;
     int storageAmount{512};
     int numCores{};
     int powerSupplyWattage{550};
@@ -89,13 +55,14 @@ struct Computer
     void consumeElectricity();
 };
 
-Computer::Computer()
+Computer::Computer() : ramAmount{16}
 {
     std::cout << "Computer being constructed" << std::endl;
 }
 
 void Computer::launchWebBrowser()
 {
+    std::cout << clockFrequency << " " << ramAmount << std::endl;
     std::cout << "Launching web browser...\n";
 }
 
@@ -117,7 +84,7 @@ struct Car
     {
         Fuel();
 
-        int octaneRating{91};
+        int octaneRating;
         float costPerGallon{4.55f};
         std::string CountryOfOrigin{"Saudi Arabia"};
         std::string distributer{"Shell"};
@@ -128,11 +95,7 @@ struct Car
         void flow();
     };
 
-    int runWebBrowser(); //returns exit code of application
-    int runAdobePhotoshop(); //returns exit code of application
-    int consumeElectricity(); //returns amount of energy consumed in watt hours
-
-    std::string carColor{"white"};
+    std::string carColor;
     int horsePower{200};
     float cost{32'000.f};
     std::string brand{"Honda"};
@@ -145,7 +108,7 @@ struct Car
 
 };
 
-Car::Car() 
+Car::Car() : carColor{"green"}
 {
     std::cout << "Car being constructed" << std::endl;
 }
@@ -157,6 +120,7 @@ void Car::playMusic()
 
 void Car::drive()
 {
+    std::cout << carColor << std::endl;
     std::cout << "Driving...\n";
 }
 
@@ -171,13 +135,14 @@ float Car::consumeFuel()
     return 0.0f;  // replace with actual implementation
 }
 
-Car::Fuel::Fuel()
+Car::Fuel::Fuel() : octaneRating{98}
 {
     std::cout << "Fuel being constructed" << std::endl;
 }
 
 void Car::Fuel::burn()
 {
+    std::cout << octaneRating << std::endl;
     std::cout << "Burning fuel...\n";
 }
 
@@ -199,7 +164,7 @@ struct CellPhone
     {
         Case();
 
-        std::string color{"black"};
+        std::string color;
         std::string brand{"Spigen"};
         float cost{12.99f};
         std::string features{"kickstand"};
@@ -210,7 +175,7 @@ struct CellPhone
         void preventScratches();
     };
 
-    std::string color{"blue"};
+    std::string color;
     std::string dataProvider{"AT&T"};
     std::string brand{"Samsung"};
     std::string processor{"Qualcomm 865"};
@@ -223,13 +188,14 @@ struct CellPhone
     void changePhoneCase(Case phoneCase);
 };
 
-CellPhone::CellPhone() 
+CellPhone::CellPhone() : color{"red"}
 {
     std::cout << "CellPhone being constructed" << std::endl;
 }
 
 void CellPhone::makeCall()
 {
+    std::cout << color << std::endl;
     std::cout << "Making call...\n";
 }
 
@@ -248,13 +214,14 @@ void CellPhone::changePhoneCase(CellPhone::Case newPhoneCase)
     std::cout << "Changing phone case to " << newPhoneCase.brand << "...\n";
 }
 
-CellPhone::Case::Case() 
+CellPhone::Case::Case()
 {
     std::cout << "Case being constructed" << std::endl;
 }
 
 void CellPhone::Case::wrapPhone()
 {
+    std::cout << color << std::endl;
     std::cout << "Wrapping phone...\n";
 }
 
@@ -272,7 +239,7 @@ struct Screen
 {
     Screen();
 
-    std::string brand{"Dell"};
+    std::string brand;
     int refreshRate{75};
     int pixelsX{920};
     int pixelsY{560};
@@ -283,13 +250,14 @@ struct Screen
     void adjustRefreshRate();
 };
 
-Screen::Screen() 
+Screen::Screen() : brand{"Dell"}
 {
     std::cout << "Screen being constructed" << std::endl;
 }
 
 void Screen::displayImages()
 {
+    std::cout << brand << std::endl;
     std::cout << "Displaying images...\n";
 }
 
@@ -307,7 +275,7 @@ struct CPU
 {
     CPU();
 
-    float frequency{4.0f};
+    float frequency;
     int amountCache{20};
     int numCores{10};
     std::string architecture{"x86"};
@@ -318,13 +286,14 @@ struct CPU
     int loadDate(int address); //returns the loaded data after gets from memory.
 };
 
-CPU::CPU() 
+CPU::CPU() : frequency{4.0f}
 {
     std::cout << "CPU being constructed" << std::endl;
 }
 
 int CPU::addNumbers(int num1, int num2)
 {
+    std::cout << frequency << std::endl;
     return num1 + num2;
 }
 
@@ -342,7 +311,7 @@ struct GraphicsCard
 {
     GraphicsCard();
 
-    int numCudaCores{4000};
+    int numCudaCores;
     int numRTCores{72};
     int amountVRAM{8};
     std::string brand{"NVIDIA"};
@@ -353,13 +322,14 @@ struct GraphicsCard
     void multiplyTwoMatrices(); //should take 2 matrices
 };
 
-GraphicsCard::GraphicsCard() 
+GraphicsCard::GraphicsCard() : numCudaCores{4000}
 {
     std::cout << "GraphicsCard being constructed" << std::endl;
 }
 
 void GraphicsCard::rotateMatrix()
 {
+    std::cout << numCudaCores << std::endl;
     std::cout << "Rotating matrix...\n";
 }
 
@@ -377,7 +347,7 @@ struct RAM
 {
     RAM();
 
-    int numGBs{32};
+    int numGBs;
     int transferRate{3700};
     std::string generation{"DDR4"};
     std::string brand{"Corsair"};
@@ -388,13 +358,14 @@ struct RAM
     void displayLights();
 };
 
-RAM::RAM() 
+RAM::RAM() : numGBs{32}
 {
     std::cout << "RAM being constructed" << std::endl;
 }
 
 void RAM::writeData(int data)
 {
+    std::cout << numGBs << std::endl;
     std::cout << "Writing data " << data << " to RAM...\n";
 }
 
@@ -412,7 +383,7 @@ struct MotherBoard
 {
     MotherBoard();
 
-    std::string formFactor{"form factor"};
+    std::string formFactor;
     std::string socketType{"LGA"};
     std::string expansionSlots{"expansion slots"};
     std::string ramSlots{"ram slots"};
@@ -423,13 +394,14 @@ struct MotherBoard
     void transferDataFromIOToCPU();
 };
 
-MotherBoard::MotherBoard() 
+MotherBoard::MotherBoard() : formFactor{"formFactor"}
 {
     std::cout << "MotherBoard being constructed" << std::endl;
 }
 
 void MotherBoard::transferDataFromCPUToRAM()
 {
+    std::cout << formFactor << std::endl;
     std::cout << "Transferring data from CPU to RAM...\n";
 }
 
@@ -448,7 +420,7 @@ struct PowerSupply
 {
     PowerSupply();
 
-    int wattage{550};
+    int wattage;
     std::string efficientRating{"efficient rating"};
     std::string formFactor{"80+ gold"};
     std::string modularity{"modular"};
@@ -459,13 +431,14 @@ struct PowerSupply
     void regulateVoltage();
 };
 
-PowerSupply::PowerSupply() 
+PowerSupply::PowerSupply() : wattage{650}
 {
     std::cout << "PowerSupply being constructed" << std::endl;
 }
 
 void PowerSupply::turnACToDC()
 {
+    std::cout << wattage << std::endl;
     std::cout << "Turning AC to DC...\n";
 }
 
@@ -494,13 +467,14 @@ struct Desktop
     void compileCode();
 };
 
-Desktop::Desktop() 
+Desktop::Desktop()
 {
     std::cout << "Desktop being constructed" << std::endl;
 }
 
 void Desktop::runGame(std::string nameOfGameToLaunch)
 {
+    std::cout << cpu.frequency << std::endl;
     std::cout << "Running game " << nameOfGameToLaunch << "...\n";
 }
 
@@ -520,7 +494,7 @@ int main()
 
     //Computer
     Computer computer;
-    
+
     computer.launchWebBrowser();
     computer.launchAdobePhotoshop();
     computer.consumeElectricity();
@@ -550,7 +524,7 @@ int main()
 
     //Car
     Car car;
-    
+
     car.playMusic();
     car.drive();
     car.putFuelInCar(fuel);
@@ -579,7 +553,7 @@ int main()
 
     //CellPhone
     CellPhone cellPhone;
-    
+
     cellPhone.makeCall();
     cellPhone.browseWeb();
     cellPhone.playMusic();
@@ -683,6 +657,6 @@ int main()
     desktop.compileCode();
 
     //dont have print outs for the member variables because i already printed out values for such types above.
-    
+
     std::cout << "good to go!" << std::endl;
 }
