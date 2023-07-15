@@ -86,6 +86,8 @@ struct Computer
     void launchWebBrowser();
     void launchAdobePhotoshop();
     void consumeElectricity();
+
+    int allocateMemory(int);
 };
 
 Computer::Computer() : ramAmount{16}
@@ -109,6 +111,19 @@ void Computer::consumeElectricity()
     std::cout << "Consuming electricity...\n";
 }
 
+int Computer::allocateMemory(int memory)
+{
+    int allocatedMemory{};
+    
+    while( allocatedMemory != memory && ramAmount > 0)
+    {
+        std::cout << "Allocated memory: " << ++allocatedMemory << std::endl;
+        --ramAmount;
+    }
+
+    return allocatedMemory;
+}
+
 struct Car
 {
     Car();
@@ -126,6 +141,8 @@ struct Car
         void burn();
         void smell();
         void flow();
+
+        float buyGas(float);
     };
 
     std::string carColor;
@@ -164,8 +181,12 @@ void Car::putFuelInCar(Car::Fuel fuel)
 
 float Car::consumeFuel()
 {
+    for(int i = 0; i < 5; ++i)
+    {
+        std::cout << "Consuming " << i << " gallons of fuel" << std::endl;
+    }
     std::cout << "Consuming fuel...\n";
-    return 0.0f;  // replace with actual implementation
+    return 5.0f;  // replace with actual implementation
 }
 
 Car::Fuel::Fuel() : octaneRating{98}
@@ -187,6 +208,15 @@ void Car::Fuel::smell()
 void Car::Fuel::flow()
 {
     std::cout << "Fuel is flowing...\n";
+}
+
+float Car::Fuel::buyGas(float gallons)
+{
+    for(float i = 1; i <= gallons; i++)
+    {
+        std::cout << "Total cost after gallon " << i << ": " << i * costPerGallon << std::endl; 
+    }
+    return costPerGallon * gallons;
 }
 
 struct CellPhone
@@ -230,6 +260,15 @@ void CellPhone::makeCall()
 {
     std::cout << color << std::endl;
     std::cout << "Making call...\n";
+
+    int callTime{5};
+
+    for(int i = 1; i <= callTime; ++i)
+    {
+        std::cout << i << " minutes on the call" << std::endl;
+    }
+
+    std::cout << "call ended" << std::endl;
 }
 
 void CellPhone::browseWeb()
@@ -266,6 +305,11 @@ void CellPhone::Case::providePadding()
 void CellPhone::Case::preventScratches()
 {
     std::cout << "Preventing scratches...\n";
+
+    for(int i = 0; i < 5; ++i)
+    {
+        std::cout << i << " scratches prevented" << std::endl;
+    }
 }
 
 struct Screen
@@ -281,6 +325,8 @@ struct Screen
     void displayImages();
     void adjustColorSettings();
     void adjustRefreshRate();
+
+    int setPixels(int, int);
 };
 
 Screen::Screen() : brand{"Dell"}
@@ -304,6 +350,15 @@ void Screen::adjustRefreshRate()
     std::cout << "Adjusting refresh rate...\n";
 }
 
+int Screen::setPixels(int numPixels, int alpha)
+{
+    for(int i = 1; i <= numPixels; ++i)
+    {
+        std::cout << i << " pixels set to alpha level " << alpha << std::endl;
+    }
+    return numPixels;
+}
+
 struct CPU
 {
     CPU();
@@ -317,6 +372,8 @@ struct CPU
     int addNumbers(int num1, int num2); //returns the result of addition.
     int jump(int offset); //returns the new address after the offset is added to curr address.
     int loadDate(int address); //returns the loaded data after gets from memory.
+
+    int allocateCache(int);
 };
 
 CPU::CPU() : frequency{4.0f}
@@ -340,6 +397,19 @@ int CPU::loadDate(int address)
     return address;
 }
 
+int CPU::allocateCache(int cache)
+{
+    int allocatedCache{};
+    
+    while( allocatedCache != cache && amountCache > 0)
+    {
+        std::cout << "Allocated cache: " << ++allocatedCache << std::endl;
+        --amountCache;
+    }
+
+    return allocatedCache;
+}
+
 struct GraphicsCard
 {
     GraphicsCard();
@@ -353,6 +423,8 @@ struct GraphicsCard
     void rotateMatrix();    //should take a matrix but not primitive
     void multipleMatrixByScalar(double scalar);
     void multiplyTwoMatrices(); //should take 2 matrices
+
+    int allocateVRAM(int);
 };
 
 GraphicsCard::GraphicsCard() : numCudaCores{4000}
@@ -376,6 +448,19 @@ void GraphicsCard::multiplyTwoMatrices()
     std::cout << "Multiplying two matrices...\n";
 }
 
+int GraphicsCard::allocateVRAM(int VRAM)
+{
+    int allocatedVRAM{};
+    
+    while( allocatedVRAM != VRAM && amountVRAM > 0)
+    {
+        std::cout << "Allocated memory: " << ++allocatedVRAM << std::endl;
+        --amountVRAM;
+    }
+
+    return allocatedVRAM;
+}
+
 struct RAM
 {
     RAM();
@@ -389,6 +474,8 @@ struct RAM
     void writeData(int data);
     int readData(int address);  //reads data at given address
     void displayLights();
+
+    int allocateRAM(int);
 };
 
 RAM::RAM() : numGBs{32}
@@ -410,6 +497,19 @@ int RAM::readData(int address)
 void RAM::displayLights()
 {
     std::cout << "Displaying lights...\n";
+}
+
+int RAM::allocateRAM(int ram)
+{
+    int allocatedRAM{};
+    
+    while( allocatedRAM != ram & numGBs > 0)
+    {
+        std::cout << "Allocated memory: " << ++allocatedRAM << std::endl;
+        --numGBs;
+    }
+
+    return allocatedRAM;
 }
 
 struct MotherBoard
@@ -441,6 +541,11 @@ void MotherBoard::transferDataFromCPUToRAM()
 void MotherBoard::transferDataFromGPUToCPU()
 {
     std::cout << "Transferring data from GPU to CPU...\n";
+
+    for(int i = 1; i < 5; ++i)
+    {
+        std::cout << i << " data transfered" << std::endl;
+    }
 }
 
 void MotherBoard::transferDataFromIOToCPU()
@@ -478,6 +583,14 @@ void PowerSupply::turnACToDC()
 void PowerSupply::provideElectricity()
 {
     std::cout << "Providing electricity...\n";
+
+    int wattsRequired = 3;
+    int wattsGiven = 0;
+
+    while(wattsGiven < wattsRequired and wattsGiven < wattage)
+    {
+        std::cout << "whatts given: " << wattsGiven++ << std::endl;
+    }
 }
 
 void PowerSupply::regulateVoltage()
@@ -498,6 +611,8 @@ struct Desktop
     void runGame(std::string nameOfGameToLaunch);
     void browseWeb();
     void compileCode();
+
+    void completeTasks(int);
 };
 
 Desktop::Desktop()
@@ -521,6 +636,14 @@ void Desktop::compileCode()
     std::cout << "Compiling code...\n";
 }
 
+void Desktop::completeTasks(int numTasks)
+{
+    for(int i = 1; i <= numTasks; ++i)
+    {
+        std::cout << "Completing task " << i << std::endl;
+    }
+}
+
 int main()
 {
     Example::main();
@@ -531,6 +654,10 @@ int main()
     computer.launchWebBrowser();
     computer.launchAdobePhotoshop();
     computer.consumeElectricity();
+
+    int allocatedMemory = computer.allocateMemory(5);
+
+    std::cout << "Total memory allocated: " << allocatedMemory << std::endl;
 
     std::cout << "Computer details: \n"
               << "Clock Frequency: " << computer.clockFrequency << " GHz\n"
@@ -546,6 +673,10 @@ int main()
     fuel.burn();
     fuel.smell();
     fuel.flow();
+
+    float cost = fuel.buyGas(5);
+
+    std::cout << "Cost to buy 5 gallons of gas: " << cost << std::endl;
 
     std::cout << "Fuel details: \n"
               << "Octane Rating: " << fuel.octaneRating << "\n"
@@ -606,6 +737,10 @@ int main()
     screen.adjustColorSettings();
     screen.adjustRefreshRate();
 
+    int numPixels = screen.setPixels(1, 2);
+
+    std::cout << numPixels << " changed" << std::endl;
+
     std::cout << "Screen details: \n"
               << "Brand: " << screen.brand << "\n"
               << "Refresh Rate: " << screen.refreshRate << " Hz\n"
@@ -618,6 +753,10 @@ int main()
     std::cout << cpu.addNumbers(3, 5) << std::endl;
     std::cout << cpu.jump(5) << std::endl;
     std::cout << cpu.loadDate(36) << std::endl;
+
+    int cache = cpu.allocateCache(3);
+
+    std::cout << "Amount of cache allocated " << cache << std::endl; 
 
     std::cout << "CPU details: \n"
               << "Frequency: " << cpu.frequency << " GHz\n"
@@ -633,6 +772,10 @@ int main()
     graphicsCard.multipleMatrixByScalar(3.0);
     graphicsCard.multiplyTwoMatrices();
 
+    int VRAM = graphicsCard.allocateVRAM(3);
+
+    std::cout << "VRAM allocated " << VRAM << std::endl;
+
     std::cout << "Graphics Card details: \n"
               << "Number of CUDA Cores: " << graphicsCard.numCudaCores << "\n"
               << "Number of RT Cores: " << graphicsCard.numRTCores << "\n"
@@ -646,6 +789,9 @@ int main()
     ram.writeData(36);
     std::cout << ram.readData(360) << std::endl;
     ram.displayLights();
+    int ramAllocated = ram.allocateRAM(3);
+
+    std::cout << "Amount of ram allocated: " << ramAllocated << std::endl;
 
     std::cout << "RAM details: \n"
               << "Number of GBs: " << ram.numGBs << "\n"
@@ -688,6 +834,7 @@ int main()
     desktop.runGame("game");
     desktop.browseWeb();
     desktop.compileCode();
+    desktop.completeTasks(4);
 
     //dont have print outs for the member variables because i already printed out values for such types above.
 
