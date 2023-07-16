@@ -113,7 +113,7 @@ void Computer::consumeElectricity()
 
 int Computer::allocateMemory(int memory)
 {
-    int allocatedMemory{};
+    int allocatedMemory{0};
     
     while( allocatedMemory != memory && ramAmount > 0)
     {
@@ -399,7 +399,7 @@ int CPU::loadDate(int address)
 
 int CPU::allocateCache(int cache)
 {
-    int allocatedCache{};
+    int allocatedCache{0};
     
     while( allocatedCache != cache && amountCache > 0)
     {
@@ -450,7 +450,7 @@ void GraphicsCard::multiplyTwoMatrices()
 
 int GraphicsCard::allocateVRAM(int VRAM)
 {
-    int allocatedVRAM{};
+    int allocatedVRAM{0};
     
     while( allocatedVRAM != VRAM && amountVRAM > 0)
     {
@@ -501,7 +501,7 @@ void RAM::displayLights()
 
 int RAM::allocateRAM(int ram)
 {
-    int allocatedRAM{};
+    int allocatedRAM{0};
     
     while( allocatedRAM != ram & numGBs > 0)
     {
